@@ -61,7 +61,7 @@ h1 { font-size: clamp(2.6rem, 5vw, 4.2rem); letter-spacing: -.02em; }
 h2 { font-size: clamp(2rem, 3.5vw, 3rem); letter-spacing: -.01em; }
 h3 { font-size: 1.6rem; }
 h4 { font-family: var(--font-disp); font-size: 1.3rem; font-weight: 600; }
-h5 { font-size: .8rem; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; color: var(--white); margin-bottom: 16px; }
+h5 { font-size: .8rem; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; color: var(--text-lt); margin-bottom: 16px; }
 
 em { font-style: italic; color: var(--teal); }
 
@@ -876,6 +876,6 @@ body.hero-page .navbar:not(.scrolled) .nav-lang .lang-btn.active {
 
 /* ── HERO BG: Port-au-Prince / Haitian scene ── */
 .hero-bg {
-  background-image: url('https://unsplash.com/photos/man-in-red-shirt-riding-on-boat-on-sea-during-daytime-lhDkQXfddvc');
+  background-image: url('');
   background-position: center 40%;
 }
