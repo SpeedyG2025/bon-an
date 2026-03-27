@@ -1,4 +1,4 @@
-// CAPSY — Multilingual Translation System
+// CAPSYS — Multilingual Translation System
 // Languages: fr (Français), ht (Kreyòl Ayisyen), en (English), es (Español)
 
 const TRANSLATIONS = {
@@ -18,7 +18,7 @@ const TRANSLATIONS = {
       services: { fr:"Services",    ht:"Sèvis",       en:"Services",    es:"Servicios" },
       nav_col:  { fr:"Navigation",  ht:"Navigasyon",  en:"Navigation",  es:"Navegación" },
       contact:  { fr:"Contact",     ht:"Kontak",      en:"Contact",     es:"Contacto" },
-      copy:     { fr:"© 2025 CAPSY. Tous droits réservés.", ht:"© 2025 CAPSY. Tout dwa rezève.", en:"© 2025 CAPSY. All rights reserved.", es:"© 2025 CAPSY. Todos los derechos reservados." },
+      copy:     { fr:"© 2025 CAPSYS. Tous droits réservés.", ht:"© 2025 CAPSYS. Tout dwa rezève.", en:"© 2025 CAPSYS. All rights reserved.", es:"© 2025 CAPSYS. Todos los derechos reservados." },
       consult:  { fr:"Consultation psychologique", ht:"Konsiltasyon sikolojik", en:"Psychological consultation", es:"Consulta psicológica" },
       social:   { fr:"Travail social", ht:"Travay sosyal", en:"Social work", es:"Trabajo social" },
       workshops:{ fr:"Ateliers collectifs", ht:"Atelye kolektif", en:"Group workshops", es:"Talleres grupales" },
@@ -61,7 +61,7 @@ const TRANSLATIONS = {
         duration: { fr:"10h–16h", ht:"10h–16h", en:"10am–4pm", es:"10h–16h" },
         full_desc: {
           fr: `<p>La Journée Portes Ouvertes de CAPSYS a accueilli plus de 150 visiteurs désireux d'en apprendre davantage sur nos services et sur la santé mentale en général.</p><p>L'événement visait à briser les tabous culturels entourant la santé mentale en Haïti, en offrant un espace de dialogue ouvert avec nos professionnels.</p><p>Des mini-consultations gratuites, des expositions interactives, et des témoignages de clients ont marqué cette journée mémorable.</p>`,
-          ht: `<p>Jounen Pòt Louvri CAPSY te akèyi plis pase 150 vizitè ki te vle aprann plis sou sèvis nou yo ak sante mantal an jeneral.</p><p>Evènman an te vize kraze tabou kiltirèl ki antoure sante mantal ann Ayiti, pandan y ap ofri yon espas dyalòg ouvè ak pwofesyonèl nou yo.</p><p>Konsiltasyon gratis, ekspozisyon entèaktif, ak temwayaj kliyan yo te make jounen memorab sa a.</p>`,
+          ht: `<p>Jounen Pòt Louvri CAPSYS te akèyi plis pase 150 vizitè ki te vle aprann plis sou sèvis nou yo ak sante mantal an jeneral.</p><p>Evènman an te vize kraze tabou kiltirèl ki antoure sante mantal ann Ayiti, pandan y ap ofri yon espas dyalòg ouvè ak pwofesyonèl nou yo.</p><p>Konsiltasyon gratis, ekspozisyon entèaktif, ak temwayaj kliyan yo te make jounen memorab sa a.</p>`,
           en: `<p>CAPSYS' Open House Day welcomed more than 150 visitors eager to learn more about our services and mental health in general.</p><p>The event aimed to break cultural taboos surrounding mental health in Haiti, offering an open dialogue space with our professionals.</p><p>Free mini-consultations, interactive exhibitions, and client testimonials marked this memorable day.</p>`,
           es: `<p>La Jornada de Puertas Abiertas de CAPSYS recibió a más de 150 visitantes deseosos de aprender más sobre nuestros servicios y la salud mental en general.</p><p>El evento buscó romper los tabúes culturales en torno a la salud mental en Haití, ofreciendo un espacio de diálogo abierto con nuestros profesionales.</p><p>Mini-consultas gratuitas, exposiciones interactivas y testimonios de clientes marcaron esta jornada memorable.</p>`,
         },
@@ -171,7 +171,7 @@ const TRANSLATIONS = {
     t1_name: "Marie-Josée T.", t1_role: { fr:"Cliente, Port-au-Prince", ht:"Kliyan, Pòtoprens", en:"Client, Port-au-Prince", es:"Clienta, Puerto Príncipe" },
     t2: { fr:"Le travail social de CAPSYS nous a aidés à reconstruire notre famille après une période très difficile. Leur accompagnement a été essentiel.", ht:"Travay sosyal CAPSYS te ede nou rekonstri fanmi nou apre yon peryòd ki trè difisil. Akonpayman yo te esansyèl.", en:"CAPSYS' social work helped us rebuild our family after a very difficult period. Their support was essential.", es:"El trabajo social de CAPSYS nos ayudó a reconstruir nuestra familia después de un período muy difícil. Su acompañamiento fue esencial." },
     t2_name: "Jean-Robert M.", t2_role: { fr:"Client, Jacmel", ht:"Kliyan, Jakmèl", en:"Client, Jacmel", es:"Cliente, Jacmel" },
-    t3: { fr:"Les ateliers collectifs m'ont redonné confiance. Je me sentais seul, mais CAPSY m'a rappelé que je fais partie d'une communauté forte.", ht:"Atelye kolektif yo te ban m konfyans ankò. Mwen te santi m pou kont mwen, men CAPSY te raple m ke mwen fè pati yon kominote ki fò.", en:"The group workshops restored my confidence. I felt alone, but CAPSY reminded me that I am part of a strong community.", es:"Los talleres grupales me devolvieron la confianza. Me sentía solo, pero CAPSY me recordó que formo parte de una comunidad fuerte." },
+    t3: { fr:"Les ateliers collectifs m'ont redonné confiance. Je me sentais seul, mais CAPSYS m'a rappelé que je fais partie d'une communauté forte.", ht:"Atelye kolektif yo te ban m konfyans ankò. Mwen te santi m pou kont mwen, men CAPSYS te raple m ke mwen fè pati yon kominote ki fò.", en:"The group workshops restored my confidence. I felt alone, but CAPSYS reminded me that I am part of a strong community.", es:"Los talleres grupales me devolvieron la confianza. Me sentía solo, pero CAPSYS me recordó que formo parte de una comunidad fuerte." },
     t3_name: "Christelle N.", t3_role: { fr:"Participante, Pétion-Ville", ht:"Patisipan, Petyonvil", en:"Participant, Pétion-Ville", es:"Participante, Pétion-Ville" },
 
     donate_title: { fr:"Soutenez la santé mentale en Haïti", ht:"Sipòte sante mantal ann Ayiti", en:"Support mental health in Haiti", es:"Apoya la salud mental en Haití" },
