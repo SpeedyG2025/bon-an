@@ -59,69 +59,29 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // ── Forms ──
-  const contactForm.addEventListener('submit', async e => {
-  e.preventDefault();
-
-  const formData = new FormData(contactForm);
-
-  try {
-    await fetch("https://formspree.io/f/mreoboke", {
-      method: "POST",
-      body: formData,
-      headers: {
-        'Accept': 'application/json'
-      }
+  const contactForm = document.getElementById('contactForm');
+  if (contactForm) {
+    contactForm.addEventListener('submit', e => {
+      e.preventDefault();
+      const T = TRANSLATIONS.contact;
+      const lang = CAPSYS_LANG.current;
+      showModal(T.modal_icon, T.modal_h[lang], T.modal_p[lang], T.modal_close[lang], () => contactForm.reset());
     });
-
-    const T = TRANSLATIONS.contact;
-    const lang = CAPSYS_LANG.current;
-
-    showModal(
-      T.modal_icon,
-      T.modal_h[lang],
-      T.modal_p[lang],
-      T.modal_close[lang],
-      () => contactForm.reset()
-    );
-
-  } catch (error) {
-    alert("Erreur: mesaj la pa voye ❌");
-    console.log(error);
   }
-});
 
-  const apptForm.addEventListener('submit', async e => {
-  e.preventDefault();
-
-  const formData = new FormData(apptForm);
-
-  try {
-    await fetch("https://formspree.io/f/mreoboke", {
-      method: "POST",
-      body: formData,
-      headers: {
-        'Accept': 'application/json'
-      }
-    });
-
-    const T = TRANSLATIONS.appt;
-    const lang = CAPSYS_LANG.current;
-
-    showModal(
-      T.modal_icon,
-      T.modal_h[lang],
-      T.modal_p[lang],
-      T.modal_close[lang],
-      () => {
+  const apptForm = document.getElementById('apptForm');
+  if (apptForm) {
+    apptForm.addEventListener('submit', e => {
+      e.preventDefault();
+      const T = TRANSLATIONS.appt;
+      const lang = CAPSYS_LANG.current;
+      showModal(T.modal_icon, T.modal_h[lang], T.modal_p[lang], T.modal_close[lang], () => {
         apptForm.reset();
         window.scrollTo(0, 0);
-      }
-    );
-
-  } catch (error) {
-    alert("Erreur: randevou pa pase ❌");
+      });
+    });
   }
-});
+
   const donateForm = document.getElementById('donateForm');
   if (donateForm) {
     donateForm.addEventListener('submit', e => {
