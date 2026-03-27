@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Activité – CAPSY</title>
+  <title>Activité – CAPSYS</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
@@ -67,7 +67,7 @@
     const currentId = parseInt(params.get('id') || '1');
 
     function renderDetail() {
-      const lang = CAPSY_LANG.current;
+      const lang = CAPSYS_LANG.current;
       const T = TRANSLATIONS.detail;
       const data = TRANSLATIONS.shared.activities_data;
       const act = data[currentId] || data[1];
@@ -109,8 +109,8 @@
       }).join('');
     }
 
-    const origApply = CAPSY_LANG.applyAll.bind(CAPSY_LANG);
-    CAPSY_LANG.applyAll = function() { origApply(); renderDetail(); };
+    const origApply = CAPSYS_LANG.applyAll.bind(CAPSY_LANG);
+    CAPSYS_LANG.applyAll = function() { origApply(); renderDetail(); };
   </script>
   <script src="main.js"></script>
   <script>renderDetail();</script>
