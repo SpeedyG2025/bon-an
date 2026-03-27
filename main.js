@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
     contactForm.addEventListener('submit', e => {
       e.preventDefault();
       const T = TRANSLATIONS.contact;
-      const lang = CAPSY_LANG.current;
+      const lang = CAPSYS_LANG.current;
       showModal(T.modal_icon, T.modal_h[lang], T.modal_p[lang], T.modal_close[lang], () => contactForm.reset());
     });
   }
@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
     apptForm.addEventListener('submit', e => {
       e.preventDefault();
       const T = TRANSLATIONS.appt;
-      const lang = CAPSY_LANG.current;
+      const lang = CAPSYS_LANG.current;
       showModal(T.modal_icon, T.modal_h[lang], T.modal_p[lang], T.modal_close[lang], () => {
         apptForm.reset();
         window.scrollTo(0, 0);
@@ -87,7 +87,7 @@ document.addEventListener('DOMContentLoaded', () => {
     donateForm.addEventListener('submit', e => {
       e.preventDefault();
       const T = TRANSLATIONS.donate;
-      const lang = CAPSY_LANG.current;
+      const lang = CAPSYS_LANG.current;
       showModal(T.modal_icon, T.modal_h[lang], T.modal_p[lang], T.modal_close[lang], () => donateForm.reset());
     });
   }
