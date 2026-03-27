@@ -1,4 +1,4 @@
-// CAPSY — Main JavaScript (multilingual edition)
+// CAPSYS — Main JavaScript (multilingual edition)
 
 document.addEventListener('DOMContentLoaded', () => {
 
