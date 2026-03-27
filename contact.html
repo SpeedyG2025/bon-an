@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact – CAPSY</title>
+  <title>Contact – CAPSYS</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
@@ -68,7 +68,7 @@
               <div class="contact-icon">✉️</div>
               <div>
                 <h5 data-i18n="contact.email_h"></h5>
-                <p>contact@capsy.ht<br/><span style="font-size:.8rem;color:var(--text-lt)" data-i18n="contact.email_delay"></span></p>
+                <p>contact@capsys.ht<br/><span style="font-size:.8rem;color:var(--text-lt)" data-i18n="contact.email_delay"></span></p>
               </div>
             </div>
             <div class="contact-item">
@@ -142,14 +142,14 @@
   <script src="i18n.js"></script>
   <script>
     function applyMultiline() {
-      const lang = CAPSY_LANG.current;
+      const lang = CAPSYS_LANG.current;
       const T = TRANSLATIONS.contact;
       const addrEl = document.getElementById('addrText');
       if (addrEl) addrEl.innerHTML = T.addr_p[lang].replace('\n','<br/>');
       const hoursEl = document.getElementById('hoursText');
       if (hoursEl) hoursEl.innerHTML = T.hours_p[lang].replace(/\n/g,'<br/>');
     }
-    const origApply = CAPSY_LANG.applyAll.bind(CAPSY_LANG);
+    const origApply = CAPSYS_LANG.applyAll.bind(CAPSYS_LANG);
     CAPSY_LANG.applyAll = function() { origApply(); applyMultiline(); };
   </script>
   <script src="main.js"></script>
