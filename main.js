@@ -59,15 +59,30 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // ── Forms ──
-  const contactForm = document.getElementById('contactForm');
-  if (contactForm) {
-    contactForm.addEventListener('submit', e => {
-      e.preventDefault();
-      const T = TRANSLATIONS.contact;
-      const lang = CAPSYS_LANG.current;
-      showModal(T.modal_icon, T.modal_h[lang], T.modal_p[lang], T.modal_close[lang], () => contactForm.reset());
-    });
-  }
+  const contactForm.addEventListener('submit', async e => {
+  e.preventDefault();
+
+  const formData = new FormData(contactForm);
+
+  await fetch("https://formspree.io/f/mreoboke", {
+    method: "POST",
+    body: formData,
+    headers: {
+      'Accept': 'application/json'
+    }
+  });
+
+  const T = TRANSLATIONS.contact;
+  const lang = CAPSYS_LANG.current;
+
+  showModal(
+    T.modal_icon,
+    T.modal_h[lang],
+    T.modal_p[lang],
+    T.modal_close[lang],
+    () => contactForm.reset()
+  );
+});
 
   const apptForm = document.getElementById('apptForm');
   if (apptForm) {
