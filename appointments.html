@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rendez-vous – CAPSY</title>
+  <title>Rendez-vous – CAPSYs</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
@@ -153,7 +153,7 @@
               <div style="display:flex;gap:14px"><span style="font-size:1.4rem">🔐</span><div><strong style="display:block;font-size:.875rem;margin-bottom:3px" data-i18n="appt.feat1_h"></strong><p style="font-size:.82rem;color:var(--text-md)" data-i18n="appt.feat1_p"></p></div></div>
               <div style="display:flex;gap:14px"><span style="font-size:1.4rem">🌍</span><div><strong style="display:block;font-size:.875rem;margin-bottom:3px" data-i18n="appt.feat2_h"></strong><p style="font-size:.82rem;color:var(--text-md)" data-i18n="appt.feat2_p"></p></div></div>
               <div style="display:flex;gap:14px"><span style="font-size:1.4rem">📱</span><div><strong style="display:block;font-size:.875rem;margin-bottom:3px" data-i18n="appt.feat3_h"></strong><p style="font-size:.82rem;color:var(--text-md)" data-i18n="appt.feat3_p"></p></div></div>
-              <div style="display:flex;gap:14px"><span style="font-size:1.4rem">💚</span><div><strong style="display:block;font-size:.875rem;margin-bottom:3px" data-i18n="appt.feat4_h"></strong><p style="font-size:.82rem;color:var(--text-md)" data-i18n="appt.feat4_p"></p></div></div>
+              <div style="display:flex;gap:14px"><span style="font-size:1.4rem">💵</span><div><strong style="display:block;font-size:.875rem;margin-bottom:3px" data-i18n="appt.feat4_h"></strong><p style="font-size:.82rem;color:var(--text-md)" data-i18n="appt.feat4_p"></p></div></div>
             </div>
           </div>
           <div class="detail-sidebar" style="background:var(--navy);border-color:var(--navy);color:#fff">
@@ -182,11 +182,11 @@
   <script>
     // "Sur place" label by lang
     const surplace = { fr:"Sur place", ht:"Sou plas", en:"On site", es:"En persona" };
-    const origApply = CAPSY_LANG.applyAll.bind(CAPSY_LANG);
+    const origApply = CAPSYS_LANG.applyAll.bind(CAPSY_LANG);
     CAPSY_LANG.applyAll = function() {
       origApply();
       const el = document.querySelector('[data-i18n-surplace]');
-      if (el) el.textContent = surplace[CAPSY_LANG.current] || surplace.fr;
+      if (el) el.textContent = surplace[CAPSYS_LANG.current] || surplace.fr;
     };
   </script>
   <script src="main.js"></script>
@@ -194,7 +194,7 @@
     const dateInput = document.getElementById('apptDate');
     if (dateInput) dateInput.setAttribute('min', new Date().toISOString().split('T')[0]);
     const el = document.querySelector('[data-i18n-surplace]');
-    if (el) { const surplace = {fr:"Sur place",ht:"Sou plas",en:"On site",es:"En persona"}; el.textContent = surplace[CAPSY_LANG.current] || surplace.fr; }
+    if (el) { const surplace = {fr:"Sur place",ht:"Sou plas",en:"On site",es:"En persona"}; el.textContent = surplace[CAPSYS_LANG.current] || surplace.fr; }
   </script>
 </body>
 </html>
