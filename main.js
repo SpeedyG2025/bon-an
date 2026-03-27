@@ -108,7 +108,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function updateImpact(amount) {
     const msg = document.getElementById('impactMsg');
     if (!msg) return;
-    const lang = CAPSY_LANG.current;
+    const lang = CAPSYS_LANG.current;
     const T = TRANSLATIONS.donate;
     if (amount <= 10)       msg.textContent = T.i10[lang] + ' — ' + T.i10s[lang];
     else if (amount <= 25)  msg.textContent = T.i25[lang] + ' — ' + T.i25s[lang];
