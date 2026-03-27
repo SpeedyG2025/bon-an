@@ -45,104 +45,123 @@
         <div>
           <h3 style="margin-bottom:28px" data-i18n="appt.form_h3"></h3>
 
-          <div style="margin-bottom:32px">
-            <p style="font-size:.78rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--text-lt);margin-bottom:16px" data-i18n="appt.step1"></p>
-            <div class="type-selector">
-              <div class="type-card selected" data-type="psychologue">
-                <div class="type-icon">
-                  <svg viewBox="0 0 32 32" fill="none" width="28" height="28"><circle cx="16" cy="10" r="6" stroke="currentColor" stroke-width="2"/><path d="M6 28c0-5.523 4.477-10 10-10s10 4.477 10 10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-                </div>
-                <strong data-i18n="appt.t_psy_h"></strong>
-                <span data-i18n="appt.t_psy_s"></span>
-              </div>
-              <div class="type-card" data-type="social">
-                <div class="type-icon">
-                  <svg viewBox="0 0 32 32" fill="none" width="28" height="28"><circle cx="10" cy="12" r="5" stroke="currentColor" stroke-width="2"/><circle cx="22" cy="12" r="5" stroke="currentColor" stroke-width="2"/><path d="M2 28c0-4.418 3.582-8 8-8M22 20c4.418 0 8 3.582 8 8M14 28c0-4.418 1.79-8 4-8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-                </div>
-                <strong data-i18n="appt.t_soc_h"></strong>
-                <span data-i18n="appt.t_soc_s"></span>
-              </div>
-            </div>
+          <!-- SUCCESS MESSAGE -->
+          <div id="apptSuccess" style="display:none;background:#e8f5e9;border:1px solid #a5d6a7;border-radius:var(--radius-lg);padding:40px;text-align:center">
+            <div style="font-size:3rem;margin-bottom:16px">🗓️✅</div>
+            <strong style="display:block;color:#2e7d32;font-size:1.2rem;font-family:var(--font-disp);margin-bottom:10px">Randevou ou a konfime!</strong>
+            <p style="color:#388e3c;font-size:.9rem;margin-bottom:20px">Nou pral voye yon konfimasyon nan email ou. Mèsi pou fè konfyans nan CAPSYS!</p>
+            <button onclick="location.reload()" class="btn-primary" style="margin:0 auto">Pran yon lòt randevou</button>
           </div>
 
-          <form id="apptForm">
-            <p style="font-size:.78rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--text-lt);margin-bottom:16px" data-i18n="appt.step2"></p>
-            <div class="form-row">
-              <div class="form-group"><label data-i18n="appt.l_fname"></label><input type="text" required /></div>
-              <div class="form-group"><label data-i18n="appt.l_lname"></label><input type="text" required /></div>
-            </div>
-            <div class="form-row">
-              <div class="form-group"><label data-i18n="appt.l_email"></label><input type="email" required /></div>
-              <div class="form-group"><label data-i18n="appt.l_phone"></label><input type="tel" placeholder="+509 XXXX XXXX" required /></div>
-            </div>
-            <div class="form-group">
-              <label data-i18n="appt.l_reason"></label>
-              <textarea data-i18n="appt.p_reason"></textarea>
+          <div id="apptFormWrap">
+            <div style="margin-bottom:32px">
+              <p style="font-size:.78rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--text-lt);margin-bottom:16px" data-i18n="appt.step1"></p>
+              <div class="type-selector">
+                <div class="type-card selected" data-type="psychologue">
+                  <div class="type-icon">
+                    <svg viewBox="0 0 32 32" fill="none" width="28" height="28"><circle cx="16" cy="10" r="6" stroke="currentColor" stroke-width="2"/><path d="M6 28c0-5.523 4.477-10 10-10s10 4.477 10 10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                  </div>
+                  <strong data-i18n="appt.t_psy_h"></strong>
+                  <span data-i18n="appt.t_psy_s"></span>
+                </div>
+                <div class="type-card" data-type="social">
+                  <div class="type-icon">
+                    <svg viewBox="0 0 32 32" fill="none" width="28" height="28"><circle cx="10" cy="12" r="5" stroke="currentColor" stroke-width="2"/><circle cx="22" cy="12" r="5" stroke="currentColor" stroke-width="2"/><path d="M2 28c0-4.418 3.582-8 8-8M22 20c4.418 0 8 3.582 8 8M14 28c0-4.418 1.79-8 4-8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                  </div>
+                  <strong data-i18n="appt.t_soc_h"></strong>
+                  <span data-i18n="appt.t_soc_s"></span>
+                </div>
+              </div>
             </div>
 
-            <p style="font-size:.78rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--text-lt);margin:24px 0 16px" data-i18n="appt.step3"></p>
-            <div class="form-row">
-              <div class="form-group">
-                <label data-i18n="appt.l_date"></label>
-                <input type="date" id="apptDate" required />
+            <!-- Formspree form -->
+            <form id="apptForm"
+                  action="https://formspree.io/f/mreoboke"
+                  method="POST">
+
+              <input type="hidden" name="_subject" value="🗓️ Nouvo Randevou CAPSYS" />
+              <input type="hidden" name="type_service" id="hiddenType" value="Psychologue" />
+
+              <p style="font-size:.78rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--text-lt);margin-bottom:16px" data-i18n="appt.step2"></p>
+              <div class="form-row">
+                <div class="form-group"><label data-i18n="appt.l_fname"></label><input type="text" name="prenom" required /></div>
+                <div class="form-group"><label data-i18n="appt.l_lname"></label><input type="text" name="nom" required /></div>
+              </div>
+              <div class="form-row">
+                <div class="form-group"><label data-i18n="appt.l_email"></label><input type="email" name="email" required /></div>
+                <div class="form-group"><label data-i18n="appt.l_phone"></label><input type="tel" name="telephone" placeholder="+509 XXXX XXXX" required /></div>
               </div>
               <div class="form-group">
-                <label data-i18n="appt.l_time"></label>
-                <select required>
-                  <option data-i18n="appt.p_time"></option>
-                  <option>08h00 – 09h00</option>
-                  <option>09h00 – 10h00</option>
-                  <option>10h00 – 11h00</option>
-                  <option>11h00 – 12h00</option>
-                  <option>14h00 – 15h00</option>
-                  <option>15h00 – 16h00</option>
-                  <option>16h00 – 17h00</option>
+                <label data-i18n="appt.l_reason"></label>
+                <textarea name="raison" data-i18n="appt.p_reason"></textarea>
+              </div>
+
+              <p style="font-size:.78rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--text-lt);margin:24px 0 16px" data-i18n="appt.step3"></p>
+              <div class="form-row">
+                <div class="form-group">
+                  <label data-i18n="appt.l_date"></label>
+                  <input type="date" id="apptDate" name="date" required />
+                </div>
+                <div class="form-group">
+                  <label data-i18n="appt.l_time"></label>
+                  <select name="heure" required>
+                    <option data-i18n="appt.p_time"></option>
+                    <option>08h00 – 09h00</option>
+                    <option>09h00 – 10h00</option>
+                    <option>10h00 – 11h00</option>
+                    <option>11h00 – 12h00</option>
+                    <option>14h00 – 15h00</option>
+                    <option>15h00 – 16h00</option>
+                    <option>16h00 – 17h00</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label data-i18n="appt.l_mode"></label>
+                <select name="mode">
+                  <option data-i18n="appt.m1"></option>
+                  <option data-i18n="appt.m2"></option>
+                  <option data-i18n="appt.m3"></option>
                 </select>
               </div>
-            </div>
-            <div class="form-group">
-              <label data-i18n="appt.l_mode"></label>
-              <select>
-                <option data-i18n="appt.m1"></option>
-                <option data-i18n="appt.m2"></option>
-                <option data-i18n="appt.m3"></option>
-              </select>
-            </div>
 
-            <p style="font-size:.78rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--text-lt);margin:24px 0 16px" data-i18n="appt.step4"></p>
-            <div class="price-tag">
-              <span>1,500 HTG</span>
-              <span data-i18n="appt.per_session"></span>
-            </div>
-            <div class="payment-methods">
-              <button type="button" class="pay-method selected">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
-                <span>Carte bancaire</span>
-              </button>
-              <button type="button" class="pay-method">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12" y2="18" stroke-linecap="round" stroke-width="3"/></svg>
-                <span>MonCash</span>
-              </button>
-              <button type="button" class="pay-method">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12" y2="18" stroke-linecap="round" stroke-width="3"/></svg>
-                <span>NATCash</span>
-              </button>
-              <button type="button" class="pay-method">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0"/></svg>
-                <span data-i18n-surplace></span>
-              </button>
-            </div>
-            <div id="cardFields">
-              <div class="form-group"><label>Numéro de carte</label><input type="text" placeholder="1234 5678 9012 3456" maxlength="19" data-card-num /></div>
-              <div class="form-row">
-                <div class="form-group"><label>Date d'expiration</label><input type="text" placeholder="MM/AA" maxlength="5" data-card-exp /></div>
-                <div class="form-group"><label>CVV</label><input type="text" placeholder="123" maxlength="4" /></div>
+              <p style="font-size:.78rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--text-lt);margin:24px 0 16px" data-i18n="appt.step4"></p>
+              <div class="price-tag">
+                <span>1,500 HTG</span>
+                <span data-i18n="appt.per_session"></span>
               </div>
-            </div>
+              <div class="payment-methods">
+                <button type="button" class="pay-method selected" data-pay="Carte bancaire">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+                  <span>Carte bancaire</span>
+                </button>
+                <button type="button" class="pay-method" data-pay="MonCash">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12" y2="18" stroke-linecap="round" stroke-width="3"/></svg>
+                  <span>MonCash</span>
+                </button>
+                <button type="button" class="pay-method" data-pay="NATCash">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12" y2="18" stroke-linecap="round" stroke-width="3"/></svg>
+                  <span>NATCash</span>
+                </button>
+                <button type="button" class="pay-method" data-pay="Sur place">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0"/></svg>
+                  <span data-i18n-surplace></span>
+                </button>
+              </div>
+              <input type="hidden" name="paiement" id="hiddenPay" value="Carte bancaire" />
 
-            <button type="submit" class="btn-primary" style="width:100%;justify-content:center;padding:16px;font-size:1rem;margin-top:8px" data-i18n="appt.btn_submit"></button>
-            <p style="font-size:.75rem;color:var(--text-lt);text-align:center;margin-top:12px" data-i18n="appt.secure_note"></p>
-          </form>
+              <div id="cardFields">
+                <div class="form-group"><label>Numéro de carte</label><input type="text" name="carte_num" placeholder="1234 5678 9012 3456" maxlength="19" data-card-num /></div>
+                <div class="form-row">
+                  <div class="form-group"><label>Date d'expiration</label><input type="text" name="carte_exp" placeholder="MM/AA" maxlength="5" data-card-exp /></div>
+                  <div class="form-group"><label>CVV</label><input type="text" name="carte_cvv" placeholder="123" maxlength="4" /></div>
+                </div>
+              </div>
+
+              <button type="submit" id="apptBtn" class="btn-primary" style="width:100%;justify-content:center;padding:16px;font-size:1rem;margin-top:8px" data-i18n="appt.btn_submit"></button>
+              <p style="font-size:.75rem;color:var(--text-lt);text-align:center;margin-top:12px" data-i18n="appt.secure_note"></p>
+            </form>
+          </div><!-- /apptFormWrap -->
         </div>
 
         <!-- SIDEBAR -->
@@ -156,10 +175,29 @@
               <div style="display:flex;gap:14px"><span style="font-size:1.4rem">💵</span><div><strong style="display:block;font-size:.875rem;margin-bottom:3px" data-i18n="appt.feat4_h"></strong><p style="font-size:.82rem;color:var(--text-md)" data-i18n="appt.feat4_p"></p></div></div>
             </div>
           </div>
+
+          <!-- Kontakte rapid -->
+          <div class="detail-sidebar" style="margin-bottom:24px">
+            <h4 style="margin-bottom:14px;font-size:1rem">Kontakte nou rapid</h4>
+            <div style="display:flex;flex-direction:column;gap:10px">
+              <a href="https://wa.me/15612613988?text=Bonjour%20CAPSYS%2C%20je%20souhaite%20prendre%20un%20rendez-vous."
+                 target="_blank"
+                 style="display:flex;align-items:center;gap:10px;background:#25D366;color:#fff;padding:12px 18px;border-radius:var(--radius-md);font-size:.85rem;font-weight:500;text-decoration:none">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.554 4.118 1.528 5.845L.057 23.07a.75.75 0 00.916.918l5.347-1.488A11.943 11.943 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.714 9.714 0 01-4.964-1.364l-.355-.212-3.686 1.026 1.003-3.592-.232-.369A9.713 9.713 0 012.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/></svg>
+                WhatsApp
+              </a>
+              <a href="sms:+15612613988?body=Bonjour%20CAPSYS%2C%20je%20souhaite%20prendre%20un%20rendez-vous."
+                 style="display:flex;align-items:center;gap:10px;background:var(--teal);color:#fff;padding:12px 18px;border-radius:var(--radius-md);font-size:.85rem;font-weight:500;text-decoration:none">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+                SMS
+              </a>
+            </div>
+          </div>
+
           <div class="detail-sidebar" style="background:var(--navy);border-color:var(--navy);color:#fff">
             <h4 style="color:#fff;margin-bottom:12px" data-i18n="appt.urgent_h"></h4>
             <p style="font-size:.875rem;color:rgba(255,255,255,.75);margin-bottom:20px" data-i18n="appt.urgent_p"></p>
-            <a href="tel:+50900000000" class="btn-primary" style="display:flex;justify-content:center;background:var(--gold);color:var(--navy)" data-i18n="appt.urgent_btn"></a>
+            <a href="tel:+15612613988" class="btn-primary" style="display:flex;justify-content:center;background:var(--gold);color:var(--navy)" data-i18n="appt.urgent_btn"></a>
           </div>
         </div>
       </div>
@@ -191,10 +229,87 @@
   </script>
   <script src="main.js"></script>
   <script>
+    // Date min
     const dateInput = document.getElementById('apptDate');
     if (dateInput) dateInput.setAttribute('min', new Date().toISOString().split('T')[0]);
-    const el = document.querySelector('[data-i18n-surplace]');
-    if (el) { const surplace = {fr:"Sur place",ht:"Sou plas",en:"On site",es:"En persona"}; el.textContent = surplace[CAPSYS_LANG.current] || surplace.fr; }
+
+    // Sur place label
+    const spEl = document.querySelector('[data-i18n-surplace]');
+    if (spEl) { const sp = {fr:"Sur place",ht:"Sou plas",en:"On site",es:"En persona"}; spEl.textContent = sp[CAPSYS_LANG.current] || sp.fr; }
+
+    // Type card → hidden field
+    document.querySelectorAll('.type-card').forEach(card => {
+      card.addEventListener('click', () => {
+        document.getElementById('hiddenType').value =
+          card.dataset.type === 'psychologue' ? 'Psychologue' : 'Travailleur Social';
+      });
+    });
+
+    // Payment → hidden field
+    document.querySelectorAll('.pay-method').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.getElementById('hiddenPay').value = btn.dataset.pay || btn.querySelector('span')?.textContent.trim() || '';
+      });
+    });
+
+    // ── Formspree AJAX submit ──
+    const apptForm = document.getElementById('apptForm');
+    if (apptForm) {
+      apptForm.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        const btn = document.getElementById('apptBtn');
+        btn.textContent = '⏳ Ap voye...';
+        btn.disabled = true;
+
+        // Capture values before reset
+        const prenom   = apptForm.querySelector('[name=prenom]')?.value || '';
+        const nom      = apptForm.querySelector('[name=nom]')?.value || '';
+        const tel      = apptForm.querySelector('[name=telephone]')?.value || 'N/A';
+        const date     = apptForm.querySelector('[name=date]')?.value || 'N/A';
+        const heure    = apptForm.querySelector('[name=heure]')?.value || 'N/A';
+        const type     = document.getElementById('hiddenType')?.value || 'N/A';
+        const mode     = apptForm.querySelector('[name=mode]')?.value || 'N/A';
+
+        try {
+          const res = await fetch(apptForm.action, {
+            method: 'POST',
+            body: new FormData(apptForm),
+            headers: { 'Accept': 'application/json' }
+          });
+
+          if (res.ok) {
+            // Kache fòm, montre siksè
+            document.getElementById('apptFormWrap').style.display = 'none';
+            document.getElementById('apptSuccess').style.display = 'block';
+            window.scrollTo(0, 0);
+
+            // WhatsApp notifikasyon — ouvri otomatikman pou admin voye konfirmasyon
+            const waText = encodeURIComponent(
+              '🗓️ NOUVO RANDEVOU CAPSYS\n' +
+              '──────────────────\n' +
+              '👤 ' + prenom + ' ' + nom + '\n' +
+              '📞 ' + tel + '\n' +
+              '🏥 Service: ' + type + '\n' +
+              '📅 Date: ' + date + ' à ' + heure + '\n' +
+              '📍 Mode: ' + mode + '\n' +
+              '──────────────────\n' +
+              'Randevou resevwa via sit CAPSYS'
+            );
+            // Ouvri WhatsApp apre 1 segonn pou admin wè notifikasyon
+            setTimeout(() => {
+              window.open('https://wa.me/15612613988?text=' + waText, '_blank');
+            }, 1000);
+
+          } else {
+            btn.textContent = '❌ Erè — Eseye ankò';
+            btn.disabled = false;
+          }
+        } catch(err) {
+          btn.textContent = '❌ Erè — Eseye ankò';
+          btn.disabled = false;
+        }
+      });
+    }
   </script>
 </body>
 </html>
