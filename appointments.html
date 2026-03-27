@@ -125,7 +125,7 @@
               </button>
               <button type="button" class="pay-method">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12" y2="18" stroke-linecap="round" stroke-width="3"/></svg>
-                <span>Digicel Cash</span>
+                <span>NATCash</span>
               </button>
               <button type="button" class="pay-method">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0"/></svg>
@@ -182,8 +182,8 @@
   <script>
     // "Sur place" label by lang
     const surplace = { fr:"Sur place", ht:"Sou plas", en:"On site", es:"En persona" };
-    const origApply = CAPSYS_LANG.applyAll.bind(CAPSY_LANG);
-    CAPSY_LANG.applyAll = function() {
+    const origApply = CAPSYS_LANG.applyAll.bind(CAPSYS_LANG);
+    CAPSYS_LANG.applyAll = function() {
       origApply();
       const el = document.querySelector('[data-i18n-surplace]');
       if (el) el.textContent = surplace[CAPSYS_LANG.current] || surplace.fr;
