@@ -323,7 +323,7 @@ const TRANSLATIONS = {
     },
     l_msg:      { fr:"Message *",  ht:"Mesaj *",   en:"Message *",   es:"Mensaje *" },
     p_msg:      { fr:"Comment pouvons-nous vous aider?", ht:"Kijan nou ka ede ou?", en:"How can we help you?", es:"¿Cómo podemos ayudarle?" },
-    privacy:    { fr:"J'accepte que mes informations soient utilisées pour traiter ma demande, en conformité avec la politique de confidentialité de CAPSY.", ht:"Mwen aksepte ke enfòmasyon m yo itilize pou trete demann mwen, konfòmeman ak politik konfidansyalite CAPSY.", en:"I agree that my information will be used to process my request, in accordance with CAPSY's privacy policy.", es:"Acepto que mi información sea utilizada para tramitar mi solicitud, de conformidad con la política de privacidad de CAPSY." },
+    privacy:    { fr:"J'accepte que mes informations soient utilisées pour traiter ma demande, en conformité avec la politique de confidentialité de CAPSYS.", ht:"Mwen aksepte ke enfòmasyon m yo itilize pou trete demann mwen, konfòmeman ak politik konfidansyalite CAPSYS.", en:"I agree that my information will be used to process my request, in accordance with CAPSYS' privacy policy.", es:"Acepto que mi información sea utilizada para tramitar mi solicitud, de conformidad con la política de privacidad de CAPSYS." },
     btn_submit: { fr:"Envoyer le message →", ht:"Voye mesaj la →", en:"Send message →", es:"Enviar mensaje →" },
     modal_icon: "✅",
     modal_h:    { fr:"Message envoyé!",   ht:"Mesaj voye!",   en:"Message sent!",   es:"¡Mensaje enviado!" },
