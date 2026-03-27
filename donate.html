@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Faire un Don – CAPSY</title>
+  <title>Faire un Don – CAPSYS</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
@@ -12,7 +12,7 @@
 <body data-page="donate">
   <nav class="navbar scrolled" id="navbar">
     <div class="nav-inner">
-      <a href="index.html" class="nav-logo"><span class="logo-mark">C</span><span class="logo-text">CAPSY</span></a>
+      <a href="index.html" class="nav-logo"><span class="logo-mark">C</span><span class="logo-text">CAPSYS</span></a>
       <button class="nav-toggle" id="navToggle"><span></span><span></span><span></span></button>
       <ul class="nav-links" id="navLinks">
         <li><a href="index.html" data-i18n="shared.nav.home"></a></li>
@@ -145,15 +145,15 @@
   <script src="i18n.js"></script>
   <script>
     function renderImpactH3() {
-      const lang = CAPSY_LANG.current;
+      const lang = CAPSYS_LANG.current;
       const T = TRANSLATIONS.donate;
       const el = document.getElementById('impactH3');
       if (el) el.innerHTML = T.impact_h3[lang].replace('\n','<br/>');
       // Set default impact msg
       updateImpact && updateImpact(25);
     }
-    const origApply = CAPSY_LANG.applyAll.bind(CAPSY_LANG);
-    CAPSY_LANG.applyAll = function() { origApply(); renderImpactH3(); };
+    const origApply = CAPSYS_LANG.applyAll.bind(CAPSYS_LANG);
+    CAPSYS_LANG.applyAll = function() { origApply(); renderImpactH3(); };
   </script>
   <script src="main.js"></script>
   <script>renderImpactH3(); updateImpact(25);</script>
