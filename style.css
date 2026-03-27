@@ -246,7 +246,7 @@ body.hero-page .navbar:not(.scrolled) .logo-text { color: #fff; }
 
 .hero-bg {
   position: absolute; inset: 0;
-  background-image: url('https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=1600&q=85');
+  background-image: url('nati.jpg');
   background-size: cover;
   background-position: center 30%;
   transform: scale(1.05);
@@ -876,6 +876,6 @@ body.hero-page .navbar:not(.scrolled) .nav-lang .lang-btn.active {
 
 /* ── HERO BG: Port-au-Prince / Haitian scene ── */
 .hero-bg {
-  background-image: url('');
+  background-image: url('nati.jpg');
   background-position: center 40%;
 }
