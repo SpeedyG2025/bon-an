@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Activité – CAPSY</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-page="detail">
+  <nav class="navbar scrolled" id="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo"><span class="logo-mark">C</span><span class="logo-text">CAPSY</span></a>
+      <button class="nav-toggle" id="navToggle"><span></span><span></span><span></span></button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" data-i18n="shared.nav.home"></a></li>
+        <li><a href="activities.html" class="active" data-i18n="shared.nav.activities"></a></li>
+        <li><a href="appointments.html" data-i18n="shared.nav.appt"></a></li>
+        <li><a href="about.html" data-i18n="shared.nav.about"></a></li>
+        <li><a href="contact.html" data-i18n="shared.nav.contact"></a></li>
+        <li><a href="donate.html" class="btn-donate-nav" data-i18n="shared.nav.donate"></a></li>
+      </ul>
+      <div class="lang-switcher nav-lang">
+        <button class="lang-btn" data-lang="ht">HT</button>
+        <button class="lang-btn" data-lang="fr">FR</button>
+        <button class="lang-btn" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="es">ES</button>
+      </div>
+    </div>
+  </nav>
+
+  <section class="section-pad" style="padding-top:120px">
+    <div class="container">
+      <a href="activities.html" id="backLink" style="display:inline-flex;align-items:center;gap:6px;font-size:.85rem;color:var(--teal);margin-bottom:32px;font-weight:500" data-i18n="detail.back"></a>
+      <div class="detail-grid" id="detailContent"></div>
+    </div>
+  </section>
+
+  <!-- Related -->
+  <section class="section-pad bg-soft">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-tag" data-i18n="detail.related_tag"></p>
+        <h2 data-i18n="detail.related_title"></h2>
+      </div>
+      <div class="activities-grid" id="relatedGrid"></div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand"><div class="footer-logo"><span class="logo-mark">C</span><span class="logo-text">CAPSY</span></div><p data-i18n="shared.footer.tagline"></p><div class="footer-social"><a href="#"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a><a href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a></div></div>
+        <div class="footer-col"><h5 data-i18n="shared.footer.nav_col"></h5><ul><li><a href="index.html" data-i18n="shared.nav.home"></a></li><li><a href="activities.html" data-i18n="shared.nav.activities"></a></li><li><a href="appointments.html" data-i18n="shared.nav.appt"></a></li><li><a href="about.html" data-i18n="shared.nav.about"></a></li></ul></div>
+        <div class="footer-col"><h5 data-i18n="shared.footer.services"></h5><ul><li><a href="appointments.html" data-i18n="shared.footer.consult"></a></li><li><a href="appointments.html" data-i18n="shared.footer.social"></a></li></ul></div>
+        <div class="footer-col"><h5 data-i18n="shared.footer.contact"></h5><ul><li>📍 Port-au-Prince, Haïti</li><li>📞 +509 XXXX XXXX</li><li>✉️ contact@capsy.ht</li></ul><a href="donate.html" class="btn-donate-footer" data-i18n="shared.footer.donate_btn"></a></div>
+      </div>
+      <div class="footer-bottom"><p data-i18n="shared.footer.copy"></p><div class="lang-switcher"><button class="lang-btn" data-lang="ht">HT</button><button class="lang-btn" data-lang="fr">FR</button><button class="lang-btn" data-lang="en">EN</button><button class="lang-btn" data-lang="es">ES</button></div></div>
+    </div>
+  </footer>
+
+  <script src="i18n.js"></script>
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const currentId = parseInt(params.get('id') || '1');
+
+    function renderDetail() {
+      const lang = CAPSY_LANG.current;
+      const T = TRANSLATIONS.detail;
+      const data = TRANSLATIONS.shared.activities_data;
+      const act = data[currentId] || data[1];
+
+      document.title = act.title[lang] + ' – CAPSY';
+
+      document.getElementById('detailContent').innerHTML = `
+        <div class="detail-main">
+          <img src="${act.img}" alt="${act.title[lang]}" class="detail-img" />
+          <span class="activity-tag">${act.tag[lang]}</span>
+          <h1 style="margin:16px 0 24px;font-size:clamp(2rem,4vw,3rem)">${act.title[lang]}</h1>
+          <div style="font-size:.9rem;color:var(--text-md);line-height:1.8">${act.full_desc[lang]}</div>
+        </div>
+        <div class="detail-sidebar">
+          <h4 style="margin-bottom:20px">${T.detail_h[lang]}</h4>
+          <div class="detail-meta">
+            <div class="detail-meta-item"><span class="detail-meta-icon">📅</span><div><strong>${T.date_l[lang]}</strong><p>${act.full_date[lang]}</p></div></div>
+            <div class="detail-meta-item"><span class="detail-meta-icon">📍</span><div><strong>${T.loc_l[lang]}</strong><p>${act.location[lang]}</p></div></div>
+            <div class="detail-meta-item"><span class="detail-meta-icon">⏱</span><div><strong>${T.dur_l[lang]}</strong><p>${act.duration[lang]}</p></div></div>
+            <div class="detail-meta-item"><span class="detail-meta-icon">🏷</span><div><strong>${T.cat_l[lang]}</strong><p>${act.tag[lang]}</p></div></div>
+          </div>
+          ${act.hasAppt ? `<a href="appointments.html" class="btn-primary" style="width:100%;justify-content:center;margin-bottom:12px">${T.appt_btn[lang]}</a>` : ''}
+          <a href="activities.html" class="btn-outline" style="width:100%;justify-content:center">${T.all_btn[lang]}</a>
+        </div>`;
+
+      // Related — show 3 others
+      const relIds = Object.keys(data).map(Number).filter(id => id !== currentId).slice(0, 3);
+      document.getElementById('relatedGrid').innerHTML = relIds.map(id => {
+        const a = data[id];
+        return `<a href="activity-detail.html?id=${id}" class="activity-card">
+          <div class="activity-img" style="background-image:url('${a.img}')"></div>
+          <div class="activity-body">
+            <span class="activity-tag">${a.tag[lang]}</span>
+            <h4>${a.title[lang]}</h4>
+            <p>${a.desc[lang]}</p>
+            <span class="activity-date">${a.date}</span>
+          </div>
+        </a>`;
+      }).join('');
+    }
+
+    const origApply = CAPSY_LANG.applyAll.bind(CAPSY_LANG);
+    CAPSY_LANG.applyAll = function() { origApply(); renderDetail(); };
+  </script>
+  <script src="main.js"></script>
+  <script>renderDetail();</script>
+</body>
+</html>

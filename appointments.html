@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rendez-vous – CAPSY</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-page="appt">
+  <nav class="navbar scrolled" id="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo"><span class="logo-mark">C</span><span class="logo-text">CAPSY</span></a>
+      <button class="nav-toggle" id="navToggle"><span></span><span></span><span></span></button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" data-i18n="shared.nav.home"></a></li>
+        <li><a href="activities.html" data-i18n="shared.nav.activities"></a></li>
+        <li><a href="appointments.html" class="active" data-i18n="shared.nav.appt"></a></li>
+        <li><a href="about.html" data-i18n="shared.nav.about"></a></li>
+        <li><a href="contact.html" data-i18n="shared.nav.contact"></a></li>
+        <li><a href="donate.html" class="btn-donate-nav" data-i18n="shared.nav.donate"></a></li>
+      </ul>
+      <div class="lang-switcher nav-lang">
+        <button class="lang-btn" data-lang="ht">HT</button>
+        <button class="lang-btn" data-lang="fr">FR</button>
+        <button class="lang-btn" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="es">ES</button>
+      </div>
+    </div>
+  </nav>
+
+  <header class="page-header">
+    <div class="container">
+      <p class="section-tag" data-i18n="appt.header_tag"></p>
+      <h1 data-i18n="appt.header_h1"></h1>
+      <p data-i18n="appt.header_sub"></p>
+    </div>
+  </header>
+
+  <section class="section-pad">
+    <div class="container">
+      <div class="appt-grid">
+        <div>
+          <h3 style="margin-bottom:28px" data-i18n="appt.form_h3"></h3>
+
+          <div style="margin-bottom:32px">
+            <p style="font-size:.78rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--text-lt);margin-bottom:16px" data-i18n="appt.step1"></p>
+            <div class="type-selector">
+              <div class="type-card selected" data-type="psychologue">
+                <div class="type-icon">
+                  <svg viewBox="0 0 32 32" fill="none" width="28" height="28"><circle cx="16" cy="10" r="6" stroke="currentColor" stroke-width="2"/><path d="M6 28c0-5.523 4.477-10 10-10s10 4.477 10 10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                </div>
+                <strong data-i18n="appt.t_psy_h"></strong>
+                <span data-i18n="appt.t_psy_s"></span>
+              </div>
+              <div class="type-card" data-type="social">
+                <div class="type-icon">
+                  <svg viewBox="0 0 32 32" fill="none" width="28" height="28"><circle cx="10" cy="12" r="5" stroke="currentColor" stroke-width="2"/><circle cx="22" cy="12" r="5" stroke="currentColor" stroke-width="2"/><path d="M2 28c0-4.418 3.582-8 8-8M22 20c4.418 0 8 3.582 8 8M14 28c0-4.418 1.79-8 4-8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                </div>
+                <strong data-i18n="appt.t_soc_h"></strong>
+                <span data-i18n="appt.t_soc_s"></span>
+              </div>
+            </div>
+          </div>
+
+          <form id="apptForm">
+            <p style="font-size:.78rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--text-lt);margin-bottom:16px" data-i18n="appt.step2"></p>
+            <div class="form-row">
+              <div class="form-group"><label data-i18n="appt.l_fname"></label><input type="text" required /></div>
+              <div class="form-group"><label data-i18n="appt.l_lname"></label><input type="text" required /></div>
+            </div>
+            <div class="form-row">
+              <div class="form-group"><label data-i18n="appt.l_email"></label><input type="email" required /></div>
+              <div class="form-group"><label data-i18n="appt.l_phone"></label><input type="tel" placeholder="+509 XXXX XXXX" required /></div>
+            </div>
+            <div class="form-group">
+              <label data-i18n="appt.l_reason"></label>
+              <textarea data-i18n="appt.p_reason"></textarea>
+            </div>
+
+            <p style="font-size:.78rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--text-lt);margin:24px 0 16px" data-i18n="appt.step3"></p>
+            <div class="form-row">
+              <div class="form-group">
+                <label data-i18n="appt.l_date"></label>
+                <input type="date" id="apptDate" required />
+              </div>
+              <div class="form-group">
+                <label data-i18n="appt.l_time"></label>
+                <select required>
+                  <option data-i18n="appt.p_time"></option>
+                  <option>08h00 – 09h00</option>
+                  <option>09h00 – 10h00</option>
+                  <option>10h00 – 11h00</option>
+                  <option>11h00 – 12h00</option>
+                  <option>14h00 – 15h00</option>
+                  <option>15h00 – 16h00</option>
+                  <option>16h00 – 17h00</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label data-i18n="appt.l_mode"></label>
+              <select>
+                <option data-i18n="appt.m1"></option>
+                <option data-i18n="appt.m2"></option>
+                <option data-i18n="appt.m3"></option>
+              </select>
+            </div>
+
+            <p style="font-size:.78rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--text-lt);margin:24px 0 16px" data-i18n="appt.step4"></p>
+            <div class="price-tag">
+              <span>1,500 HTG</span>
+              <span data-i18n="appt.per_session"></span>
+            </div>
+            <div class="payment-methods">
+              <button type="button" class="pay-method selected">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+                <span>Carte bancaire</span>
+              </button>
+              <button type="button" class="pay-method">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12" y2="18" stroke-linecap="round" stroke-width="3"/></svg>
+                <span>MonCash</span>
+              </button>
+              <button type="button" class="pay-method">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12" y2="18" stroke-linecap="round" stroke-width="3"/></svg>
+                <span>Digicel Cash</span>
+              </button>
+              <button type="button" class="pay-method">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0"/></svg>
+                <span data-i18n-surplace></span>
+              </button>
+            </div>
+            <div id="cardFields">
+              <div class="form-group"><label>Numéro de carte</label><input type="text" placeholder="1234 5678 9012 3456" maxlength="19" data-card-num /></div>
+              <div class="form-row">
+                <div class="form-group"><label>Date d'expiration</label><input type="text" placeholder="MM/AA" maxlength="5" data-card-exp /></div>
+                <div class="form-group"><label>CVV</label><input type="text" placeholder="123" maxlength="4" /></div>
+              </div>
+            </div>
+
+            <button type="submit" class="btn-primary" style="width:100%;justify-content:center;padding:16px;font-size:1rem;margin-top:8px" data-i18n="appt.btn_submit"></button>
+            <p style="font-size:.75rem;color:var(--text-lt);text-align:center;margin-top:12px" data-i18n="appt.secure_note"></p>
+          </form>
+        </div>
+
+        <!-- SIDEBAR -->
+        <div>
+          <div class="detail-sidebar" style="margin-bottom:24px">
+            <h4 style="margin-bottom:20px" data-i18n="appt.sidebar_h"></h4>
+            <div style="display:flex;flex-direction:column;gap:18px">
+              <div style="display:flex;gap:14px"><span style="font-size:1.4rem">🔐</span><div><strong style="display:block;font-size:.875rem;margin-bottom:3px" data-i18n="appt.feat1_h"></strong><p style="font-size:.82rem;color:var(--text-md)" data-i18n="appt.feat1_p"></p></div></div>
+              <div style="display:flex;gap:14px"><span style="font-size:1.4rem">🌍</span><div><strong style="display:block;font-size:.875rem;margin-bottom:3px" data-i18n="appt.feat2_h"></strong><p style="font-size:.82rem;color:var(--text-md)" data-i18n="appt.feat2_p"></p></div></div>
+              <div style="display:flex;gap:14px"><span style="font-size:1.4rem">📱</span><div><strong style="display:block;font-size:.875rem;margin-bottom:3px" data-i18n="appt.feat3_h"></strong><p style="font-size:.82rem;color:var(--text-md)" data-i18n="appt.feat3_p"></p></div></div>
+              <div style="display:flex;gap:14px"><span style="font-size:1.4rem">💚</span><div><strong style="display:block;font-size:.875rem;margin-bottom:3px" data-i18n="appt.feat4_h"></strong><p style="font-size:.82rem;color:var(--text-md)" data-i18n="appt.feat4_p"></p></div></div>
+            </div>
+          </div>
+          <div class="detail-sidebar" style="background:var(--navy);border-color:var(--navy);color:#fff">
+            <h4 style="color:#fff;margin-bottom:12px" data-i18n="appt.urgent_h"></h4>
+            <p style="font-size:.875rem;color:rgba(255,255,255,.75);margin-bottom:20px" data-i18n="appt.urgent_p"></p>
+            <a href="tel:+50900000000" class="btn-primary" style="display:flex;justify-content:center;background:var(--gold);color:var(--navy)" data-i18n="appt.urgent_btn"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand"><div class="footer-logo"><span class="logo-mark">C</span><span class="logo-text">CAPSY</span></div><p data-i18n="shared.footer.tagline"></p><div class="footer-social"><a href="#"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a><a href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a></div></div>
+        <div class="footer-col"><h5 data-i18n="shared.footer.nav_col"></h5><ul><li><a href="index.html" data-i18n="shared.nav.home"></a></li><li><a href="activities.html" data-i18n="shared.nav.activities"></a></li><li><a href="appointments.html" data-i18n="shared.nav.appt"></a></li><li><a href="about.html" data-i18n="shared.nav.about"></a></li><li><a href="contact.html" data-i18n="shared.nav.contact"></a></li></ul></div>
+        <div class="footer-col"><h5 data-i18n="shared.footer.services"></h5><ul><li><a href="appointments.html" data-i18n="shared.footer.consult"></a></li><li><a href="appointments.html" data-i18n="shared.footer.social"></a></li><li><a href="activities.html" data-i18n="shared.footer.workshops"></a></li></ul></div>
+        <div class="footer-col"><h5 data-i18n="shared.footer.contact"></h5><ul><li>📍 Port-au-Prince, Haïti</li><li>📞 +509 XXXX XXXX</li><li>✉️ contact@capsy.ht</li></ul><a href="donate.html" class="btn-donate-footer" data-i18n="shared.footer.donate_btn"></a></div>
+      </div>
+      <div class="footer-bottom"><p data-i18n="shared.footer.copy"></p><div class="lang-switcher"><button class="lang-btn" data-lang="ht">HT</button><button class="lang-btn" data-lang="fr">FR</button><button class="lang-btn" data-lang="en">EN</button><button class="lang-btn" data-lang="es">ES</button></div></div>
+    </div>
+  </footer>
+
+  <script src="i18n.js"></script>
+  <script>
+    // "Sur place" label by lang
+    const surplace = { fr:"Sur place", ht:"Sou plas", en:"On site", es:"En persona" };
+    const origApply = CAPSY_LANG.applyAll.bind(CAPSY_LANG);
+    CAPSY_LANG.applyAll = function() {
+      origApply();
+      const el = document.querySelector('[data-i18n-surplace]');
+      if (el) el.textContent = surplace[CAPSY_LANG.current] || surplace.fr;
+    };
+  </script>
+  <script src="main.js"></script>
+  <script>
+    const dateInput = document.getElementById('apptDate');
+    if (dateInput) dateInput.setAttribute('min', new Date().toISOString().split('T')[0]);
+    const el = document.querySelector('[data-i18n-surplace]');
+    if (el) { const surplace = {fr:"Sur place",ht:"Sou plas",en:"On site",es:"En persona"}; el.textContent = surplace[CAPSY_LANG.current] || surplace.fr; }
+  </script>
+</body>
+</html>

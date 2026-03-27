@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Activités – CAPSY</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-page="activities">
+  <nav class="navbar scrolled" id="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo"><span class="logo-mark">C</span><span class="logo-text">CAPSY</span></a>
+      <button class="nav-toggle" id="navToggle"><span></span><span></span><span></span></button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" data-i18n="shared.nav.home"></a></li>
+        <li><a href="activities.html" class="active" data-i18n="shared.nav.activities"></a></li>
+        <li><a href="appointments.html" data-i18n="shared.nav.appt"></a></li>
+        <li><a href="about.html" data-i18n="shared.nav.about"></a></li>
+        <li><a href="contact.html" data-i18n="shared.nav.contact"></a></li>
+        <li><a href="donate.html" class="btn-donate-nav" data-i18n="shared.nav.donate"></a></li>
+      </ul>
+      <div class="lang-switcher nav-lang">
+        <button class="lang-btn" data-lang="ht">HT</button>
+        <button class="lang-btn" data-lang="fr">FR</button>
+        <button class="lang-btn" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="es">ES</button>
+      </div>
+    </div>
+  </nav>
+
+  <header class="page-header">
+    <div class="container">
+      <p class="section-tag" data-i18n="activities.header_tag"></p>
+      <h1 data-i18n="activities.header_h1"></h1>
+      <p data-i18n="activities.header_sub"></p>
+    </div>
+  </header>
+
+  <section class="section-pad">
+    <div class="container">
+      <div class="filter-bar" id="filterBar">
+        <button class="filter-btn active" data-filter="all" data-i18n="activities.filter_all"></button>
+        <button class="filter-btn" data-filter="workshop" data-i18n="activities.filter_w"></button>
+        <button class="filter-btn" data-filter="training" data-i18n="activities.filter_t"></button>
+        <button class="filter-btn" data-filter="awareness" data-i18n="activities.filter_a"></button>
+        <button class="filter-btn" data-filter="community" data-i18n="activities.filter_c"></button>
+      </div>
+      <div class="activities-full-grid" id="actGrid"></div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand"><div class="footer-logo"><span class="logo-mark">C</span><span class="logo-text">CAPSY</span></div><p data-i18n="shared.footer.tagline"></p><div class="footer-social"><a href="#"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a><a href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a></div></div>
+        <div class="footer-col"><h5 data-i18n="shared.footer.nav_col"></h5><ul><li><a href="index.html" data-i18n="shared.nav.home"></a></li><li><a href="activities.html" data-i18n="shared.nav.activities"></a></li><li><a href="appointments.html" data-i18n="shared.nav.appt"></a></li><li><a href="about.html" data-i18n="shared.nav.about"></a></li><li><a href="contact.html" data-i18n="shared.nav.contact"></a></li></ul></div>
+        <div class="footer-col"><h5 data-i18n="shared.footer.services"></h5><ul><li><a href="appointments.html" data-i18n="shared.footer.consult"></a></li><li><a href="appointments.html" data-i18n="shared.footer.social"></a></li><li><a href="activities.html" data-i18n="shared.footer.workshops"></a></li></ul></div>
+        <div class="footer-col"><h5 data-i18n="shared.footer.contact"></h5><ul><li>📍 Port-au-Prince, Haïti</li><li>📞 +509 XXXX XXXX</li><li>✉️ contact@capsy.ht</li></ul><a href="donate.html" class="btn-donate-footer" data-i18n="shared.footer.donate_btn"></a></div>
+      </div>
+      <div class="footer-bottom"><p data-i18n="shared.footer.copy"></p><div class="lang-switcher"><button class="lang-btn" data-lang="ht">HT</button><button class="lang-btn" data-lang="fr">FR</button><button class="lang-btn" data-lang="en">EN</button><button class="lang-btn" data-lang="es">ES</button></div></div>
+    </div>
+  </footer>
+
+  <script src="i18n.js"></script>
+  <script>
+    // filter categories per activity ID
+    const CATS = {1:'workshop',2:'awareness',3:'training',4:'community',5:'workshop',6:'awareness'};
+    let activeFilter = 'all';
+
+    function renderGrid() {
+      const lang = CAPSY_LANG.current;
+      const data = TRANSLATIONS.shared.activities_data;
+      const grid = document.getElementById('actGrid');
+      grid.innerHTML = Object.keys(data).map(id => {
+        const a = data[id];
+        const cat = CATS[id];
+        const hidden = activeFilter !== 'all' && activeFilter !== cat ? 'style="display:none"' : '';
+        return `<a href="activity-detail.html?id=${id}" class="activity-card" data-cat="${cat}" ${hidden}>
+          <div class="activity-img" style="background-image:url('${a.img}')"></div>
+          <div class="activity-body">
+            <span class="activity-tag">${a.tag[lang]}</span>
+            <h4>${a.title[lang]}</h4>
+            <p>${a.desc[lang]}</p>
+            <span class="activity-date">${a.date}</span>
+          </div>
+        </a>`;
+      }).join('');
+
+      // filter buttons
+      document.querySelectorAll('.filter-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          activeFilter = btn.dataset.filter;
+          document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          document.querySelectorAll('.activity-card').forEach(card => {
+            card.style.display = (activeFilter === 'all' || card.dataset.cat === activeFilter) ? '' : 'none';
+          });
+        });
+      });
+    }
+
+    const origApply = CAPSY_LANG.applyAll.bind(CAPSY_LANG);
+    CAPSY_LANG.applyAll = function() { origApply(); renderGrid(); };
+  </script>
+  <script src="main.js"></script>
+  <script>renderGrid();</script>
+</body>
+</html>

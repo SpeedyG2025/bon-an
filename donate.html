@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Faire un Don – CAPSY</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-page="donate">
+  <nav class="navbar scrolled" id="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo"><span class="logo-mark">C</span><span class="logo-text">CAPSY</span></a>
+      <button class="nav-toggle" id="navToggle"><span></span><span></span><span></span></button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" data-i18n="shared.nav.home"></a></li>
+        <li><a href="activities.html" data-i18n="shared.nav.activities"></a></li>
+        <li><a href="appointments.html" data-i18n="shared.nav.appt"></a></li>
+        <li><a href="about.html" data-i18n="shared.nav.about"></a></li>
+        <li><a href="contact.html" data-i18n="shared.nav.contact"></a></li>
+        <li><a href="donate.html" class="btn-donate-nav active" data-i18n="shared.nav.donate"></a></li>
+      </ul>
+      <div class="lang-switcher nav-lang">
+        <button class="lang-btn" data-lang="ht">HT</button>
+        <button class="lang-btn" data-lang="fr">FR</button>
+        <button class="lang-btn" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="es">ES</button>
+      </div>
+    </div>
+  </nav>
+
+  <header class="page-header" style="background:linear-gradient(135deg,#1a2e40 0%,#2a7d6e 100%)">
+    <div class="container">
+      <p class="section-tag" style="background:rgba(255,255,255,.15);color:#fff" data-i18n="donate.header_tag"></p>
+      <h1>
+        <span data-i18n="donate.header_h1a"></span><br/>
+        <em style="color:var(--gold-lt)" data-i18n="donate.header_em"></em>
+      </h1>
+      <p data-i18n="donate.header_sub"></p>
+    </div>
+  </header>
+
+  <section class="section-pad">
+    <div class="container">
+      <div class="donate-grid">
+        <!-- FORM -->
+        <div>
+          <h3 style="margin-bottom:28px" data-i18n="donate.form_h3"></h3>
+
+          <p style="font-size:.78rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--text-lt);margin-bottom:14px" data-i18n="donate.amount_tag"></p>
+          <div class="amount-selector">
+            <button class="amount-btn" data-amount="10">$10</button>
+            <button class="amount-btn active" data-amount="25">$25</button>
+            <button class="amount-btn" data-amount="50">$50</button>
+            <button class="amount-btn" data-amount="100">$100</button>
+            <button class="amount-btn" data-amount="250">$250</button>
+            <button class="amount-btn" data-amount="custom" data-i18n="donate.custom_btn"></button>
+          </div>
+
+          <div class="form-group" id="customAmountWrap" style="display:none">
+            <label data-i18n="donate.custom_l"></label>
+            <input type="number" id="customAmount" placeholder="75" min="1" />
+          </div>
+
+          <div style="background:rgba(42,125,110,.07);border:1px solid rgba(42,125,110,.2);border-radius:var(--radius-md);padding:16px;margin-bottom:28px">
+            <p id="impactMsg" style="font-size:.875rem;color:var(--teal);font-weight:500"></p>
+          </div>
+
+          <form id="donateForm">
+            <p style="font-size:.78rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--text-lt);margin-bottom:16px" data-i18n="donate.info_tag"></p>
+            <div class="form-row">
+              <div class="form-group"><label data-i18n="donate.l_fname"></label><input type="text" /></div>
+              <div class="form-group"><label data-i18n="donate.l_lname"></label><input type="text" /></div>
+            </div>
+            <div class="form-group"><label data-i18n="donate.l_email"></label><input type="email" required /></div>
+            <div class="form-group">
+              <label data-i18n="donate.l_msg"></label>
+              <textarea data-i18n="donate.p_msg"></textarea>
+            </div>
+
+            <p style="font-size:.78rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--text-lt);margin:24px 0 16px" data-i18n="donate.pay_tag"></p>
+            <div class="payment-methods">
+              <button type="button" class="pay-method selected"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg><span>Carte bancaire</span></button>
+              <button type="button" class="pay-method"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12" y2="18" stroke-linecap="round" stroke-width="3"/></svg><span>MonCash</span></button>
+              <button type="button" class="pay-method"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg><span>PayPal</span></button>
+            </div>
+
+            <div id="cardFields">
+              <div class="form-group"><label>Numéro de carte</label><input type="text" placeholder="1234 5678 9012 3456" maxlength="19" data-card-num /></div>
+              <div class="form-row">
+                <div class="form-group"><label>Expiration</label><input type="text" placeholder="MM/AA" maxlength="5" data-card-exp /></div>
+                <div class="form-group"><label>CVV</label><input type="text" placeholder="123" maxlength="4" /></div>
+              </div>
+            </div>
+
+            <div style="display:flex;align-items:center;gap:10px;margin:16px 0 24px">
+              <input type="checkbox" id="recurring" style="width:18px;height:18px;cursor:pointer" />
+              <label for="recurring" style="font-size:.875rem;cursor:pointer;color:var(--text-md)" data-i18n="donate.recurring"></label>
+            </div>
+
+            <button type="submit" class="btn-donate-large" style="width:100%;justify-content:center;background:var(--teal);color:#fff;font-size:1rem;padding:18px" data-i18n="donate.btn_submit"></button>
+            <p style="font-size:.75rem;color:var(--text-lt);text-align:center;margin-top:12px" data-i18n="donate.secure_note"></p>
+          </form>
+        </div>
+
+        <!-- IMPACT SIDEBAR -->
+        <div>
+          <div style="margin-bottom:32px">
+            <p class="section-tag" data-i18n="donate.impact_tag"></p>
+            <h3 style="margin-bottom:24px" id="impactH3"></h3>
+            <div class="donate-impact">
+              <div class="impact-item"><div class="impact-amount">$10</div><div class="impact-desc"><strong data-i18n="donate.i10"></strong><span data-i18n="donate.i10s"></span></div></div>
+              <div class="impact-item"><div class="impact-amount">$25</div><div class="impact-desc"><strong data-i18n="donate.i25"></strong><span data-i18n="donate.i25s"></span></div></div>
+              <div class="impact-item"><div class="impact-amount">$50</div><div class="impact-desc"><strong data-i18n="donate.i50"></strong><span data-i18n="donate.i50s"></span></div></div>
+              <div class="impact-item"><div class="impact-amount">$100</div><div class="impact-desc"><strong data-i18n="donate.i100"></strong><span data-i18n="donate.i100s"></span></div></div>
+              <div class="impact-item"><div class="impact-amount">$250</div><div class="impact-desc"><strong data-i18n="donate.i250"></strong><span data-i18n="donate.i250s"></span></div></div>
+            </div>
+          </div>
+
+          <div style="background:var(--cream);border-radius:var(--radius-lg);padding:32px;text-align:center">
+            <!-- Haitian landscape / hope visual -->
+            <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=500&q=80" alt="Haiti landscape" style="width:100%;border-radius:12px;margin-bottom:20px;height:180px;object-fit:cover;object-position:center"/>
+            <h4 style="margin-bottom:10px" data-i18n="donate.thanks_h"></h4>
+            <p style="font-size:.875rem;color:var(--text-md);line-height:1.7" data-i18n="donate.thanks_p"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand"><div class="footer-logo"><span class="logo-mark">C</span><span class="logo-text">CAPSY</span></div><p data-i18n="shared.footer.tagline"></p><div class="footer-social"><a href="#"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a><a href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a></div></div>
+        <div class="footer-col"><h5 data-i18n="shared.footer.nav_col"></h5><ul><li><a href="index.html" data-i18n="shared.nav.home"></a></li><li><a href="activities.html" data-i18n="shared.nav.activities"></a></li><li><a href="appointments.html" data-i18n="shared.nav.appt"></a></li><li><a href="about.html" data-i18n="shared.nav.about"></a></li><li><a href="contact.html" data-i18n="shared.nav.contact"></a></li></ul></div>
+        <div class="footer-col"><h5 data-i18n="shared.footer.services"></h5><ul><li><a href="appointments.html" data-i18n="shared.footer.consult"></a></li><li><a href="appointments.html" data-i18n="shared.footer.social"></a></li></ul></div>
+        <div class="footer-col"><h5 data-i18n="shared.footer.contact"></h5><ul><li>📍 Port-au-Prince, Haïti</li><li>📞 +509 XXXX XXXX</li><li>✉️ contact@capsy.ht</li></ul><a href="donate.html" class="btn-donate-footer" data-i18n="shared.footer.donate_btn"></a></div>
+      </div>
+      <div class="footer-bottom"><p data-i18n="shared.footer.copy"></p><div class="lang-switcher"><button class="lang-btn" data-lang="ht">HT</button><button class="lang-btn" data-lang="fr">FR</button><button class="lang-btn" data-lang="en">EN</button><button class="lang-btn" data-lang="es">ES</button></div></div>
+    </div>
+  </footer>
+
+  <script src="i18n.js"></script>
+  <script>
+    function renderImpactH3() {
+      const lang = CAPSY_LANG.current;
+      const T = TRANSLATIONS.donate;
+      const el = document.getElementById('impactH3');
+      if (el) el.innerHTML = T.impact_h3[lang].replace('\n','<br/>');
+      // Set default impact msg
+      updateImpact && updateImpact(25);
+    }
+    const origApply = CAPSY_LANG.applyAll.bind(CAPSY_LANG);
+    CAPSY_LANG.applyAll = function() { origApply(); renderImpactH3(); };
+  </script>
+  <script src="main.js"></script>
+  <script>renderImpactH3(); updateImpact(25);</script>
+</body>
+</html>

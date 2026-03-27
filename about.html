@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>À propos – CAPSY</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-page="about">
+  <nav class="navbar scrolled" id="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo"><span class="logo-mark">C</span><span class="logo-text">CAPSY</span></a>
+      <button class="nav-toggle" id="navToggle"><span></span><span></span><span></span></button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" data-i18n="shared.nav.home"></a></li>
+        <li><a href="activities.html" data-i18n="shared.nav.activities"></a></li>
+        <li><a href="appointments.html" data-i18n="shared.nav.appt"></a></li>
+        <li><a href="about.html" class="active" data-i18n="shared.nav.about"></a></li>
+        <li><a href="contact.html" data-i18n="shared.nav.contact"></a></li>
+        <li><a href="donate.html" class="btn-donate-nav" data-i18n="shared.nav.donate"></a></li>
+      </ul>
+      <div class="lang-switcher nav-lang">
+        <button class="lang-btn" data-lang="ht">HT</button>
+        <button class="lang-btn" data-lang="fr">FR</button>
+        <button class="lang-btn" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="es">ES</button>
+      </div>
+    </div>
+  </nav>
+
+  <header class="page-header">
+    <div class="container">
+      <p class="section-tag" data-i18n="about.header_tag"></p>
+      <h1 data-i18n="about.header_h1"></h1>
+      <p data-i18n="about.header_sub"></p>
+    </div>
+  </header>
+
+  <!-- Mission & Vision -->
+  <section class="section-pad">
+    <div class="container">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;margin-bottom:80px" class="about-intro">
+        <div>
+          <p class="section-tag" data-i18n="about.history_tag"></p>
+          <h2 style="margin-bottom:20px">
+            <span data-i18n="about.history_title"></span><br />
+            <em data-i18n="about.history_em"></em>
+          </h2>
+          <p style="color:var(--text-md);line-height:1.8;margin-bottom:16px" data-i18n="about.history_p1"></p>
+          <p style="color:var(--text-md);line-height:1.8" data-i18n="about.history_p2"></p>
+        </div>
+        <div style="border-radius:var(--radius-lg);overflow:hidden;height:360px">
+          <!-- Real Haitian community photo: group meeting outdoors -->
+          <img src="https://images.unsplash.com/photo-1504805572947-34fad45aed93?w=900&q=85"
+               alt="Équipe CAPSY en communauté"
+               style="width:100%;height:100%;object-fit:cover;object-position:center top" />
+        </div>
+      </div>
+
+      <div class="mission-vision-grid">
+        <div class="mv-card">
+          <div class="mv-icon"><svg width="36" height="36" viewBox="0 0 36 36" fill="none"><circle cx="18" cy="18" r="16" stroke="var(--teal)" stroke-width="2"/><path d="M12 18l4 4 8-8" stroke="var(--teal)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <h3 data-i18n="about.mission_title"></h3>
+          <p data-i18n="about.mission_desc"></p>
+        </div>
+        <div class="mv-card accent">
+          <div class="mv-icon"><svg width="36" height="36" viewBox="0 0 36 36" fill="none"><circle cx="18" cy="10" r="5" stroke="white" stroke-width="2"/><path d="M8 30c0-5.523 4.477-10 10-10s10 4.477 10 10" stroke="white" stroke-width="2" stroke-linecap="round"/><path d="M18 4v2M28 10h2M18 28v2M8 10H6M25.5 6.5l1.4 1.4M10.5 6.5L9.1 7.9" stroke="rgba(255,255,255,.6)" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+          <h3 data-i18n="about.vision_title"></h3>
+          <p data-i18n="about.vision_desc"></p>
+        </div>
+        <div class="mv-card">
+          <div class="mv-icon"><svg width="36" height="36" viewBox="0 0 36 36" fill="none"><circle cx="12" cy="14" r="5" stroke="var(--teal)" stroke-width="2"/><circle cx="24" cy="14" r="5" stroke="var(--teal)" stroke-width="2"/><path d="M4 30c0-4.418 3.582-8 8-8M24 22c4.418 0 8 3.582 8 8" stroke="var(--teal)" stroke-width="2" stroke-linecap="round"/><path d="M16 30c0-4.418 1.79-8 4-8" stroke="var(--teal)" stroke-width="2" stroke-linecap="round"/></svg></div>
+          <h3 data-i18n="about.who_title"></h3>
+          <p data-i18n="about.who_desc"></p>
+        </div>
+        <div class="mv-card">
+          <div class="mv-icon"><svg width="36" height="36" viewBox="0 0 36 36" fill="none"><path d="M18 4l3.09 6.26L28 11.27l-5 4.87 1.18 6.88L18 19.77l-6.18 3.25L13 16.14 8 11.27l6.91-1.01L18 4z" stroke="var(--teal)" stroke-width="2" stroke-linejoin="round"/></svg></div>
+          <h3 data-i18n="about.values_title"></h3>
+          <p data-i18n="about.values_desc"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team -->
+  <section class="section-pad bg-soft">
+    <div class="container">
+      <div class="section-header center">
+        <p class="section-tag" data-i18n="about.team_tag"></p>
+        <h2 data-i18n="about.team_title"></h2>
+        <p style="color:var(--text-md);max-width:520px;margin:16px auto 0" data-i18n="about.team_sub"></p>
+      </div>
+      <div class="team-grid">
+        <div class="team-card">
+          <div class="team-avatar" style="background:linear-gradient(135deg,#c2dcc8,#7dab8e)">
+            <img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=400&q=80" alt="Dr. Marie-Claire Édouard" style="width:100%;height:100%;object-fit:cover;object-position:top"/>
+          </div>
+          <div class="team-body">
+            <h4>Dr. Marie-Claire Édouard</h4>
+            <span class="team-role" data-i18n-teamrole="1"></span>
+            <p data-i18n-teamdesc="1"></p>
+          </div>
+        </div>
+        <div class="team-card">
+          <div class="team-avatar" style="background:linear-gradient(135deg,#b5d4f4,#3B8BD4)">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80" alt="Jean-Pierre Valcin" style="width:100%;height:100%;object-fit:cover;object-position:top"/>
+          </div>
+          <div class="team-body">
+            <h4>Jean-Pierre Valcin</h4>
+            <span class="team-role" data-i18n-teamrole="2"></span>
+            <p data-i18n-teamdesc="2"></p>
+          </div>
+        </div>
+        <div class="team-card">
+          <div class="team-avatar" style="background:linear-gradient(135deg,#FAC775,#BA7517)">
+            <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=400&q=80" alt="Annette Louissaint" style="width:100%;height:100%;object-fit:cover;object-position:top"/>
+          </div>
+          <div class="team-body">
+            <h4>Annette Louissaint</h4>
+            <span class="team-role" data-i18n-teamrole="3"></span>
+            <p data-i18n-teamdesc="3"></p>
+          </div>
+        </div>
+        <div class="team-card">
+          <div class="team-avatar" style="background:linear-gradient(135deg,#F5C4B3,#D85A30)">
+            <img src="https://images.unsplash.com/photo-1556157382-97eda2f9e2bf?w=400&q=80" alt="Rodrigue Desrosiers" style="width:100%;height:100%;object-fit:cover;object-position:top"/>
+          </div>
+          <div class="team-body">
+            <h4>Rodrigue Desrosiers</h4>
+            <span class="team-role" data-i18n-teamrole="4"></span>
+            <p data-i18n-teamdesc="4"></p>
+          </div>
+        </div>
+        <div class="team-card">
+          <div class="team-avatar" style="background:linear-gradient(135deg,#CECBF6,#7F77DD)">
+            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&q=80" alt="Sandrine Joseph" style="width:100%;height:100%;object-fit:cover;object-position:top"/>
+          </div>
+          <div class="team-body">
+            <h4>Sandrine Joseph</h4>
+            <span class="team-role" data-i18n-teamrole="5"></span>
+            <p data-i18n-teamdesc="5"></p>
+          </div>
+        </div>
+        <div class="team-card">
+          <div class="team-avatar" style="background:linear-gradient(135deg,#9FE1CB,#0F6E56)">
+            <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&q=80" alt="Claudette Mézidor" style="width:100%;height:100%;object-fit:cover;object-position:top"/>
+          </div>
+          <div class="team-body">
+            <h4>Claudette Mézidor</h4>
+            <span class="team-role" data-i18n-teamrole="6"></span>
+            <p data-i18n-teamdesc="6"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="donate-banner">
+    <div class="container">
+      <div class="donate-banner-inner">
+        <div class="donate-banner-text">
+          <h2 data-i18n="about.cta_title"></h2>
+          <p data-i18n="about.cta_desc"></p>
+        </div>
+        <div style="display:flex;gap:16px;flex-wrap:wrap">
+          <a href="appointments.html" class="btn-ghost" data-i18n="about.cta_btn1"></a>
+          <a href="donate.html" class="btn-donate-large" data-i18n="about.cta_btn2"></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand"><div class="footer-logo"><span class="logo-mark">C</span><span class="logo-text">CAPSY</span></div><p data-i18n="shared.footer.tagline"></p><div class="footer-social"><a href="#"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a><a href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a></div></div>
+        <div class="footer-col"><h5 data-i18n="shared.footer.nav_col"></h5><ul><li><a href="index.html" data-i18n="shared.nav.home"></a></li><li><a href="activities.html" data-i18n="shared.nav.activities"></a></li><li><a href="appointments.html" data-i18n="shared.nav.appt"></a></li><li><a href="about.html" data-i18n="shared.nav.about"></a></li><li><a href="contact.html" data-i18n="shared.nav.contact"></a></li></ul></div>
+        <div class="footer-col"><h5 data-i18n="shared.footer.services"></h5><ul><li><a href="appointments.html" data-i18n="shared.footer.consult"></a></li><li><a href="appointments.html" data-i18n="shared.footer.social"></a></li><li><a href="activities.html" data-i18n="shared.footer.workshops"></a></li></ul></div>
+        <div class="footer-col"><h5 data-i18n="shared.footer.contact"></h5><ul><li>📍 Port-au-Prince, Haïti</li><li>📞 +509 XXXX XXXX</li><li>✉️ contact@capsy.ht</li></ul><a href="donate.html" class="btn-donate-footer" data-i18n="shared.footer.donate_btn"></a></div>
+      </div>
+      <div class="footer-bottom"><p data-i18n="shared.footer.copy"></p><div class="lang-switcher"><button class="lang-btn" data-lang="ht">HT</button><button class="lang-btn" data-lang="fr">FR</button><button class="lang-btn" data-lang="en">EN</button><button class="lang-btn" data-lang="es">ES</button></div></div>
+    </div>
+  </footer>
+
+  <style>
+    @media(max-width:768px){.about-intro{grid-template-columns:1fr!important}}
+    .team-avatar{height:200px;overflow:hidden;display:block}
+    .team-avatar img{width:100%;height:100%;object-fit:cover;object-position:top}
+  </style>
+  <script src="i18n.js"></script>
+  <script>
+    const TEAM = {
+      1:{ role:{fr:"Directrice · Psychologue Clinicienne",ht:"Direktris · Sikolojis Klinik",en:"Director · Clinical Psychologist",es:"Directora · Psicóloga Clínica"}, desc:{fr:"Docteure en psychologie clinique, spécialisée en trauma et résilience. 12 ans d'expérience en Haïti et à l'étranger.",ht:"Doktè nan sikoloji klinik, espesyalize nan twoma ak reziyans. 12 ane eksperyans ann Ayiti ak aletranje.",en:"Doctor of clinical psychology, specialising in trauma and resilience. 12 years of experience in Haiti and abroad.",es:"Doctora en psicología clínica, especializada en trauma y resiliencia. 12 años de experiencia en Haití y en el exterior."}},
+      2:{ role:{fr:"Psychologue · Thérapie de groupe",ht:"Sikolojis · Terapi gwoup",en:"Psychologist · Group Therapy",es:"Psicólogo · Terapia grupal"}, desc:{fr:"Spécialiste en thérapie cognitive-comportementale et animateur de groupes de parole pour adultes et adolescents.",ht:"Espesyalis nan teyapi kognitif-konpòtmantal ak animatè gwoup lapawòl pou adilt ak adolesan.",en:"Specialist in cognitive-behavioural therapy and facilitator of discussion groups for adults and teenagers.",es:"Especialista en terapia cognitivo-conductual y facilitador de grupos de diálogo para adultos y adolescentes."}},
+      3:{ role:{fr:"Travailleuse Sociale Senior",ht:"Travayè Sosyal Senyò",en:"Senior Social Worker",es:"Trabajadora Social Senior"}, desc:{fr:"Experte en intervention familiale et sociale. Coordinatrice du programme de soutien aux communautés rurales.",ht:"Ekspè nan entèvansyon familyal ak sosyal. Kowòdonatris pwogram sipò kominote riral yo.",en:"Expert in family and social intervention. Coordinator of the rural community support programme.",es:"Experta en intervención familiar y social. Coordinadora del programa de apoyo a comunidades rurales."}},
+      4:{ role:{fr:"Psychologue · Enfants & Adolescents",ht:"Sikolojis · Timoun & Adolesan",en:"Psychologist · Children & Teenagers",es:"Psicólogo · Niños y Adolescentes"}, desc:{fr:"Psychologue scolaire et clinicien pour enfants. Responsable des programmes jeunesse de CAPSY.",ht:"Sikolojis eskolè ak klinik pou timoun. Responsab pwogram jènes CAPSY.",en:"School psychologist and clinician for children. Head of CAPSY's youth programmes.",es:"Psicólogo escolar y clínico para niños. Responsable de los programas juveniles de CAPSY."}},
+      5:{ role:{fr:"Travailleuse Sociale · Formation",ht:"Travayè Sosyal · Fòmasyon",en:"Social Worker · Training",es:"Trabajadora Social · Formación"}, desc:{fr:"Formatrice certifiée en premiers secours psychologiques. Responsable du programme de formation des agents.",ht:"Formatris sètifye nan premye swen sikolojik. Responsab pwogram fòmasyon ajan yo.",en:"Certified trainer in psychological first aid. Head of the agent training programme.",es:"Formadora certificada en primeros auxilios psicológicos. Responsable del programa de formación de agentes."}},
+      6:{ role:{fr:"Coordinatrice Administrative",ht:"Kowòdonatris Administratif",en:"Administrative Coordinator",es:"Coordinadora Administrativa"}, desc:{fr:"Gestionnaire des opérations quotidiennes et coordinatrice des rendez-vous. Garante de l'expérience client.",ht:"Jesyonè operasyon chak jou ak kowòdonatris randevou yo. Garanti eksperyans kliyan.",en:"Manager of daily operations and appointment coordinator. Guarantor of client experience.",es:"Gestora de operaciones diarias y coordinadora de citas. Garante de la experiencia del cliente."}},
+    };
+
+    function applyTeam() {
+      const lang = CAPSY_LANG.current;
+      document.querySelectorAll('[data-i18n-teamrole]').forEach(el => {
+        const id = el.dataset.i18nTeamrole;
+        el.textContent = TEAM[id]?.role[lang] || '';
+      });
+      document.querySelectorAll('[data-i18n-teamdesc]').forEach(el => {
+        const id = el.dataset.i18nTeamdesc;
+        el.textContent = TEAM[id]?.desc[lang] || '';
+      });
+    }
+
+    const origApply = CAPSY_LANG.applyAll.bind(CAPSY_LANG);
+    CAPSY_LANG.applyAll = function() { origApply(); applyTeam(); };
+  </script>
+  <script src="main.js"></script>
+  <script>applyTeam();</script>
+</body>
+</html>
