@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CAPSY – Centre d'Appui Psychologique et Social</title>
+  <title>CAPSYS – Centre d'Appui Psychologique et Social</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
@@ -16,7 +16,7 @@
     <div class="nav-inner">
       <a href="index.html" class="nav-logo">
         <span class="logo-mark">C</span>
-        <span class="logo-text">CAPSY</span>
+        <span class="logo-text">CAPSYS</span>
       </a>
       <button class="nav-toggle" id="navToggle" aria-label="Menu">
         <span></span><span></span><span></span>
@@ -195,7 +195,7 @@
           <ul>
             <li>📍 Port-au-Prince, Haïti</li>
             <li>📞 +509 XXXX XXXX</li>
-            <li>✉️ contact@capsy.ht</li>
+            <li>✉️ contact@capsys.ht</li>
           </ul>
           <a href="donate.html" class="btn-donate-footer" data-i18n="shared.footer.donate_btn"></a>
         </div>
@@ -236,7 +236,7 @@
     }
 
     function renderTestimonials() {
-      const lang = CAPSY_LANG.current;
+      const lang = CAPSYS_LANG.current;
       const T = TRANSLATIONS.index;
       const grid = document.getElementById('testiGrid');
       if (!grid) return;
@@ -259,8 +259,8 @@
     }
 
     // Hook into language changes
-    const origApplyAll = CAPSY_LANG.applyAll.bind(CAPSY_LANG);
-    CAPSY_LANG.applyAll = function() {
+    const origApplyAll = CAPSYS_LANG.applyAll.bind(CAPSYS_LANG);
+    CAPSYS_LANG.applyAll = function() {
       origApplyAll();
       renderHomeActivities();
       renderTestimonials();
