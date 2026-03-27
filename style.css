@@ -862,7 +862,7 @@ body.hero-page .navbar:not(.scrolled) .logo-text { color: #fff; }
   border-color: var(--teal);
   color: var(--teal);
   background: rgba(42,125,110,.08);
-}
+
 body.hero-page .navbar:not(.scrolled) .nav-lang .lang-btn {
   border-color: rgba(255,255,255,.3);
   color: rgba(255,255,255,.7);
@@ -877,5 +877,5 @@ body.hero-page .navbar:not(.scrolled) .nav-lang .lang-btn.active {
 /* ── HERO BG: Port-au-Prince / Haitian scene ── */
 .hero-bg {
   background-image: url('https://unsplash.com/photos/man-in-red-shirt-riding-on-boat-on-sea-during-daytime-lhDkQXfddvc');
-  background-position: center 20%;
+  background-position: center 60%;
 }
