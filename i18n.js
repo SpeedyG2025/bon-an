@@ -60,10 +60,10 @@ const TRANSLATIONS = {
         location: { fr:"Pétion-Ville, Haïti", ht:"Petyonvil, Ayiti", en:"Pétion-Ville, Haiti", es:"Pétion-Ville, Haití" },
         duration: { fr:"10h–16h", ht:"10h–16h", en:"10am–4pm", es:"10h–16h" },
         full_desc: {
-          fr: `<p>La Journée Portes Ouvertes de CAPSY a accueilli plus de 150 visiteurs désireux d'en apprendre davantage sur nos services et sur la santé mentale en général.</p><p>L'événement visait à briser les tabous culturels entourant la santé mentale en Haïti, en offrant un espace de dialogue ouvert avec nos professionnels.</p><p>Des mini-consultations gratuites, des expositions interactives, et des témoignages de clients ont marqué cette journée mémorable.</p>`,
+          fr: `<p>La Journée Portes Ouvertes de CAPSYS a accueilli plus de 150 visiteurs désireux d'en apprendre davantage sur nos services et sur la santé mentale en général.</p><p>L'événement visait à briser les tabous culturels entourant la santé mentale en Haïti, en offrant un espace de dialogue ouvert avec nos professionnels.</p><p>Des mini-consultations gratuites, des expositions interactives, et des témoignages de clients ont marqué cette journée mémorable.</p>`,
           ht: `<p>Jounen Pòt Louvri CAPSY te akèyi plis pase 150 vizitè ki te vle aprann plis sou sèvis nou yo ak sante mantal an jeneral.</p><p>Evènman an te vize kraze tabou kiltirèl ki antoure sante mantal ann Ayiti, pandan y ap ofri yon espas dyalòg ouvè ak pwofesyonèl nou yo.</p><p>Konsiltasyon gratis, ekspozisyon entèaktif, ak temwayaj kliyan yo te make jounen memorab sa a.</p>`,
-          en: `<p>CAPSY's Open House Day welcomed more than 150 visitors eager to learn more about our services and mental health in general.</p><p>The event aimed to break cultural taboos surrounding mental health in Haiti, offering an open dialogue space with our professionals.</p><p>Free mini-consultations, interactive exhibitions, and client testimonials marked this memorable day.</p>`,
-          es: `<p>La Jornada de Puertas Abiertas de CAPSY recibió a más de 150 visitantes deseosos de aprender más sobre nuestros servicios y la salud mental en general.</p><p>El evento buscó romper los tabúes culturales en torno a la salud mental en Haití, ofreciendo un espacio de diálogo abierto con nuestros profesionales.</p><p>Mini-consultas gratuitas, exposiciones interactivas y testimonios de clientes marcaron esta jornada memorable.</p>`,
+          en: `<p>CAPSYS' Open House Day welcomed more than 150 visitors eager to learn more about our services and mental health in general.</p><p>The event aimed to break cultural taboos surrounding mental health in Haiti, offering an open dialogue space with our professionals.</p><p>Free mini-consultations, interactive exhibitions, and client testimonials marked this memorable day.</p>`,
+          es: `<p>La Jornada de Puertas Abiertas de CAPSYS recibió a más de 150 visitantes deseosos de aprender más sobre nuestros servicios y la salud mental en general.</p><p>El evento buscó romper los tabúes culturales en torno a la salud mental en Haití, ofreciendo un espacio de diálogo abierto con nuestros profesionales.</p><p>Mini-consultas gratuitas, exposiciones interactivas y testimonios de clientes marcaron esta jornada memorable.</p>`,
         },
         img: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=1200&q=85",
         hasAppt: false,
@@ -141,13 +141,13 @@ const TRANSLATIONS = {
 
   // ── INDEX PAGE ──────────────────────────────────────────────────
   index: {
-    meta_title: { fr:"CAPSY – Centre d'Appui Psychologique et Social", ht:"CAPSY – Sant Sipò Sikolojik ak Sosyal", en:"CAPSY – Center for Psychological and Social Support", es:"CAPSY – Centro de Apoyo Psicológico y Social" },
+    meta_title: { fr:"CAPSYS – Centre d'Appui Psychologique et Social", ht:"CAPSYS – Sant Sipò Sikolojik ak Sosyal", en:"CAPSYS – Center for Psychological and Social Support", es:"CAPSYS – Centro de Apoyo Psicológico y Social" },
     hero_eyebrow: { fr:"Centre d'Appui Psychologique et Social", ht:"Sant Sipò Sikolojik ak Sosyal", en:"Center for Psychological and Social Support", es:"Centro de Apoyo Psicológico y Social" },
     hero_title1: { fr:"Prendre soin de", ht:"Pran swen", en:"Caring for the", es:"Cuidando el" },
     hero_title2: { fr:"l'âme haïtienne", ht:"nanm ayisyen an", en:"Haitian soul", es:"alma haitiana" },
     hero_sub: { fr:"Nous offrons un soutien psychologique et social ancré dans la réalité et la culture haïtienne — parce que chaque personne mérite d'être entendue, comprise, et accompagnée.", ht:"Nou ofri sipò sikolojik ak sosyal ki anrasinen nan reyalite ak kilti ayisyèn — paske chak moun merite yo tande li, konprann li, epi akonpaye li.", en:"We offer psychological and social support rooted in Haitian reality and culture — because every person deserves to be heard, understood, and accompanied.", es:"Ofrecemos apoyo psicológico y social arraigado en la realidad y la cultura haitiana — porque toda persona merece ser escuchada, comprendida y acompañada." },
     btn_appt:   { fr:"Prendre un rendez-vous", ht:"Pran yon randevou", en:"Book an Appointment", es:"Solicitar una cita" },
-    btn_about:  { fr:"Découvrir CAPSY",       ht:"Dekouvri CAPSY",   en:"Discover CAPSY",     es:"Descubrir CAPSY" },
+    btn_about:  { fr:"Découvrir CAPSYS",       ht:"Dekouvri CAPSYS",   en:"Discover CAPSYS",     es:"Descubrir CAPSYS" },
     scroll:     { fr:"Défiler",               ht:"Woule",             en:"Scroll",             es:"Desplazar" },
 
     services_tag:   { fr:"Nos Services", ht:"Sèvis Nou", en:"Our Services", es:"Nuestros Servicios" },
@@ -167,30 +167,30 @@ const TRANSLATIONS = {
 
     testi_tag:   { fr:"Témoignages",      ht:"Temwayaj",     en:"Testimonials",   es:"Testimonios" },
     testi_title: { fr:"Des vies transformées", ht:"Lavi ki chanje", en:"Lives transformed", es:"Vidas transformadas" },
-    t1: { fr:"Grâce à CAPSY, j'ai appris à gérer mon anxiété. Le psychologue m'a aidé à comprendre mes émotions dans un cadre culturel qui me ressemble.", ht:"Gras ak CAPSY, mwen te aprann jere ansyete mwen. Sikolojis la te ede m konprann emosyon m nan yon kad kiltirèl ki sanble avèk mwen.", en:"Thanks to CAPSY, I learned to manage my anxiety. The psychologist helped me understand my emotions in a cultural framework that resonates with me.", es:"Gracias a CAPSY, aprendí a manejar mi ansiedad. El psicólogo me ayudó a entender mis emociones en un marco cultural con el que me identifico." },
+    t1: { fr:"Grâce à CAPSYS, j'ai appris à gérer mon anxiété. Le psychologue m'a aidé à comprendre mes émotions dans un cadre culturel qui me ressemble.", ht:"Gras ak CAPSYS, mwen te aprann jere ansyete mwen. Sikolojis la te ede m konprann emosyon m nan yon kad kiltirèl ki sanble avèk mwen.", en:"Thanks to CAPSYS, I learned to manage my anxiety. The psychologist helped me understand my emotions in a cultural framework that resonates with me.", es:"Gracias a CAPSYS, aprendí a manejar mi ansiedad. El psicólogo me ayudó a entender mis emociones en un marco cultural con el que me identifico." },
     t1_name: "Marie-Josée T.", t1_role: { fr:"Cliente, Port-au-Prince", ht:"Kliyan, Pòtoprens", en:"Client, Port-au-Prince", es:"Clienta, Puerto Príncipe" },
-    t2: { fr:"Le travail social de CAPSY nous a aidés à reconstruire notre famille après une période très difficile. Leur accompagnement a été essentiel.", ht:"Travay sosyal CAPSY te ede nou rekonstri fanmi nou apre yon peryòd ki trè difisil. Akonpayman yo te esansyèl.", en:"CAPSY's social work helped us rebuild our family after a very difficult period. Their support was essential.", es:"El trabajo social de CAPSY nos ayudó a reconstruir nuestra familia después de un período muy difícil. Su acompañamiento fue esencial." },
+    t2: { fr:"Le travail social de CAPSYS nous a aidés à reconstruire notre famille après une période très difficile. Leur accompagnement a été essentiel.", ht:"Travay sosyal CAPSYS te ede nou rekonstri fanmi nou apre yon peryòd ki trè difisil. Akonpayman yo te esansyèl.", en:"CAPSYS' social work helped us rebuild our family after a very difficult period. Their support was essential.", es:"El trabajo social de CAPSYS nos ayudó a reconstruir nuestra familia después de un período muy difícil. Su acompañamiento fue esencial." },
     t2_name: "Jean-Robert M.", t2_role: { fr:"Client, Jacmel", ht:"Kliyan, Jakmèl", en:"Client, Jacmel", es:"Cliente, Jacmel" },
     t3: { fr:"Les ateliers collectifs m'ont redonné confiance. Je me sentais seul, mais CAPSY m'a rappelé que je fais partie d'une communauté forte.", ht:"Atelye kolektif yo te ban m konfyans ankò. Mwen te santi m pou kont mwen, men CAPSY te raple m ke mwen fè pati yon kominote ki fò.", en:"The group workshops restored my confidence. I felt alone, but CAPSY reminded me that I am part of a strong community.", es:"Los talleres grupales me devolvieron la confianza. Me sentía solo, pero CAPSY me recordó que formo parte de una comunidad fuerte." },
     t3_name: "Christelle N.", t3_role: { fr:"Participante, Pétion-Ville", ht:"Patisipan, Petyonvil", en:"Participant, Pétion-Ville", es:"Participante, Pétion-Ville" },
 
     donate_title: { fr:"Soutenez la santé mentale en Haïti", ht:"Sipòte sante mantal ann Ayiti", en:"Support mental health in Haiti", es:"Apoya la salud mental en Haití" },
-    donate_desc:  { fr:"Votre don permet à CAPSY d'étendre ses services aux communautés les plus vulnérables. Chaque contribution fait une différence réelle.", ht:"Don ou pèmèt CAPSY elaji sèvis li yo nan kominote ki pi vilnerab yo. Chak kontribisyon fè yon diferans reyèl.", en:"Your donation allows CAPSY to extend its services to the most vulnerable communities. Every contribution makes a real difference.", es:"Su donación permite a CAPSY extender sus servicios a las comunidades más vulnerables. Cada contribución marca una diferencia real." },
+    donate_desc:  { fr:"Votre don permet à CAPSYS d'étendre ses services aux communautés les plus vulnérables. Chaque contribution fait une différence réelle.", ht:"Don ou pèmèt CAPSYS elaji sèvis li yo nan kominote ki pi vilnerab yo. Chak kontribisyon fè yon diferans reyèl.", en:"Your donation allows CAPSYS to extend its services to the most vulnerable communities. Every contribution makes a real difference.", es:"Su donación permite a CAPSYS extender sus servicios a las comunidades más vulnerables. Cada contribución marca una diferencia real." },
     donate_btn:   { fr:"Faire un don maintenant", ht:"Fè yon don kounye a", en:"Donate Now", es:"Donar ahora" },
   },
 
   // ── ABOUT PAGE ──────────────────────────────────────────────────
   about: {
-    meta_title: { fr:"À propos – CAPSY", ht:"Sou nou – CAPSY", en:"About – CAPSY", es:"Nosotros – CAPSY" },
+    meta_title: { fr:"À propos – CAPSYS", ht:"Sou nou – CAPSYS", en:"About – CAPSYS", es:"Nosotros – CAPSYS" },
     header_tag: { fr:"Qui sommes-nous", ht:"Ki nou ye", en:"Who we are", es:"Quiénes somos" },
-    header_h1:  { fr:"À propos de CAPSY", ht:"Sou CAPSY", en:"About CAPSY", es:"Sobre CAPSY" },
+    header_h1:  { fr:"À propos de CAPSYS", ht:"Sou CAPSYS", en:"About CAPSYS", es:"Sobre CAPSYS" },
     header_sub: { fr:"Fondé avec la conviction que chaque Haïtien mérite un accès à des soins psychologiques et sociaux de qualité.", ht:"Fonde ak konviksyon ke chak Ayisyen merite aksè a swen sikolojik ak sosyal de kalite.", en:"Founded on the conviction that every Haitian deserves access to quality psychological and social care.", es:"Fundado con la convicción de que todo haitiano merece acceso a una atención psicológica y social de calidad." },
 
     history_tag:   { fr:"Notre histoire",        ht:"Istwa nou",         en:"Our story",           es:"Nuestra historia" },
     history_title: { fr:"Nés de la nécessité,",  ht:"Ne nan nesesite,",  en:"Born from necessity,", es:"Nacidos de la necesidad," },
     history_em:    { fr:"portés par la conviction", ht:"pote pa konviksyon", en:"driven by conviction", es:"impulsados por la convicción" },
-    history_p1:    { fr:"CAPSY a été fondé en 2022 par une équipe de psychologues et de travailleurs sociaux haïtiens face au constat alarmant : la santé mentale en Haïti est gravement sous-investie, et pourtant les besoins sont immenses.", ht:"CAPSY te fonde an 2022 pa yon ekip sikolojis ak travayè sosyal ayisyèn fas ak konsta alaman: sante mantal ann Ayiti manke envestisman grav, men bezwen yo imens.", en:"CAPSY was founded in 2022 by a team of Haitian psychologists and social workers in response to an alarming reality: mental health in Haiti is severely under-resourced, yet the needs are immense.", es:"CAPSY fue fundado en 2022 por un equipo de psicólogos y trabajadores sociales haitianos ante una realidad alarmante: la salud mental en Haití está gravemente desatendida, pero las necesidades son inmensas." },
-    history_p2:    { fr:"Face aux crises répétées — catastrophes naturelles, instabilité sociale, pauvreté — des milliers d'Haïtiens portent des traumatismes non traités. CAPSY est là pour changer cela.", ht:"Fas ak kriz repete yo — katastwòf natirèl, enStabilite sosyal, povrete — dè milye Ayisyen pote twoma ki pa trete. CAPSY la pou chanje sa.", en:"Faced with repeated crises — natural disasters, social instability, poverty — thousands of Haitians carry untreated trauma. CAPSY is here to change that.", es:"Ante las crisis repetidas — desastres naturales, inestabilidad social, pobreza — miles de haitianos cargan traumas no tratados. CAPSY está aquí para cambiar eso." },
+    history_p1:    { fr:"CAPSYS a été fondé en 2022 par une équipe de psychologues et de travailleurs sociaux haïtiens face au constat alarmant : la santé mentale en Haïti est gravement sous-investie, et pourtant les besoins sont immenses.", ht:"CAPSYS te fonde an 2022 pa yon ekip sikolojis ak travayè sosyal ayisyèn fas ak konsta alaman: sante mantal ann Ayiti manke envestisman grav, men bezwen yo imens.", en:"CAPSYS was founded in 2022 by a team of Haitian psychologists and social workers in response to an alarming reality: mental health in Haiti is severely under-resourced, yet the needs are immense.", es:"CAPSYS fue fundado en 2022 por un equipo de psicólogos y trabajadores sociales haitianos ante una realidad alarmante: la salud mental en Haití está gravemente desatendida, pero las necesidades son inmensas." },
+    history_p2:    { fr:"Face aux crises répétées — catastrophes naturelles, instabilité sociale, pauvreté — des milliers d'Haïtiens portent des traumatismes non traités. CAPSYS est là pour changer cela.", ht:"Fas ak kriz repete yo — katastwòf natirèl, enStabilite sosyal, povrete — dè milye Ayisyen pote twoma ki pa trete. CAPSYS la pou chanje sa.", en:"Faced with repeated crises — natural disasters, social instability, poverty — thousands of Haitians carry untreated trauma. CAPSYS is here to change that.", es:"Ante las crisis repetidas — desastres naturales, inestabilidad social, pobreza — miles de haitianos cargan traumas no tratados. CAPSYS está aquí para cambiar eso." },
 
     mission_title: { fr:"Notre Mission",     ht:"Misyon Nou",      en:"Our Mission",     es:"Nuestra Misión" },
     mission_desc:  { fr:"Offrir des services psychologiques et sociaux accessibles, culturellement adaptés et de haute qualité aux individus, familles et communautés d'Haïti — en particulier aux plus vulnérables.", ht:"Ofri sèvis sikolojik ak sosyal ki aksesib, adepte kiltirèlman ak wo kalite pou endividi, fanmi ak kominote ann Ayiti — sitou pou pi vilnerab yo.", en:"To provide accessible, culturally adapted, high-quality psychological and social services to individuals, families and communities in Haiti — particularly the most vulnerable.", es:"Ofrecer servicios psicológicos y sociales accesibles, culturalmente adaptados y de alta calidad a individuos, familias y comunidades de Haití — en particular a los más vulnerables." },
@@ -213,7 +213,7 @@ const TRANSLATIONS = {
 
   // ── ACTIVITIES PAGE ──────────────────────────────────────────────
   activities: {
-    meta_title: { fr:"Activités – CAPSY",    ht:"Aktivite – CAPSY",    en:"Activities – CAPSY",   es:"Actividades – CAPSY" },
+    meta_title: { fr:"Activités – CAPSYS",    ht:"Aktivite – CAPSYS",    en:"Activities – CAPSYS",   es:"Actividades – CAPSYS" },
     header_tag: { fr:"Nos Activités",        ht:"Aktivite Nou",        en:"Our Activities",       es:"Nuestras Actividades" },
     header_h1:  { fr:"Initiatives & Événements", ht:"Inisyativ & Evènman", en:"Initiatives & Events", es:"Iniciativas y Eventos" },
     header_sub: { fr:"Ateliers, formations, et programmes communautaires pour promouvoir le bien-être psychologique et social en Haïti.", ht:"Atelye, fòmasyon, ak pwogram kominotè pou pwomouvoir byennèt sikolojik ak sosyal ann Ayiti.", en:"Workshops, training, and community programmes to promote psychological and social well-being in Haiti.", es:"Talleres, formaciones y programas comunitarios para promover el bienestar psicológico y social en Haití." },
@@ -240,7 +240,7 @@ const TRANSLATIONS = {
 
   // ── APPOINTMENTS PAGE ──────────────────────────────────────────
   appt: {
-    meta_title: { fr:"Rendez-vous – CAPSY",    ht:"Randevou – CAPSY",    en:"Appointments – CAPSY", es:"Citas – CAPSY" },
+    meta_title: { fr:"Rendez-vous – CAPSYS",    ht:"Randevou – CAPSYS",    en:"Appointments – CAPSYS", es:"Citas – CAPSYS" },
     header_tag: { fr:"Prise de Rendez-vous",   ht:"Pran Randevou",       en:"Book an Appointment",  es:"Reservar una Cita" },
     header_h1:  { fr:"Réservez votre consultation", ht:"Rezève konsiltasyon ou", en:"Book your consultation", es:"Reserve su consulta" },
     header_sub: { fr:"Choisissez le type de professionnel, sélectionnez vos disponibilités, et réglez en ligne en toute sécurité.", ht:"Chwazi tip pwofesyonèl, chwazi disponibilite ou, epi peye sou entènèt an tout sekirite.", en:"Choose the type of professional, select your availability, and pay online securely.", es:"Elija el tipo de profesional, seleccione su disponibilidad y pague en línea de forma segura." },
@@ -289,7 +289,7 @@ const TRANSLATIONS = {
 
   // ── CONTACT PAGE ──────────────────────────────────────────────
   contact: {
-    meta_title: { fr:"Contact – CAPSY",      ht:"Kontak – CAPSY",     en:"Contact – CAPSY",     es:"Contacto – CAPSY" },
+    meta_title: { fr:"Contact – CAPSYS",      ht:"Kontak – CAPSYS",     en:"Contact – CAPSYS",     es:"Contacto – CAPSYS" },
     header_tag: { fr:"Nous contacter",       ht:"Kontakte nou",       en:"Contact us",           es:"Contáctenos" },
     header_h1:  { fr:"Entrons en contact",   ht:"Ann antre an kontak", en:"Let's get in touch",  es:"Pongámonos en contacto" },
     header_sub: { fr:"Nous sommes disponibles pour répondre à vos questions, ou pour vous guider vers les services qui correspondent à vos besoins.", ht:"Nou disponib pou reponn kesyon ou yo, oswa pou gide ou vè sèvis ki koresponn ak bezwen ou.", en:"We are available to answer your questions, or to guide you towards the services that best suit your needs.", es:"Estamos disponibles para responder sus preguntas o guiarle hacia los servicios que mejor se adapten a sus necesidades." },
@@ -333,8 +333,8 @@ const TRANSLATIONS = {
 
   // ── DONATE PAGE ──────────────────────────────────────────────
   donate: {
-    meta_title: { fr:"Faire un Don – CAPSY",  ht:"Fè yon Don – CAPSY", en:"Donate – CAPSY",     es:"Donar – CAPSY" },
-    header_tag: { fr:"❤ Soutenir CAPSY",     ht:"❤ Sipòte CAPSY",    en:"❤ Support CAPSY",    es:"❤ Apoyar CAPSY" },
+    meta_title: { fr:"Faire un Don – CAPSYS",  ht:"Fè yon Don – CAPSYS", en:"Donate – CAPSYS",     es:"Donar – CAPSYS" },
+    header_tag: { fr:"❤ Soutenir CAPSYS",     ht:"❤ Sipòte CAPSYS",    en:"❤ Support CAPSYS",    es:"❤ Apoyar CAPSYS" },
     header_h1a: { fr:"Soutenez la santé",    ht:"Sipòte sante",       en:"Support mental",      es:"Apoya la salud" },
     header_em:  { fr:"mentale en Haïti",     ht:"mantal ann Ayiti",   en:"health in Haiti",     es:"mental en Haití" },
     header_sub: { fr:"Chaque don, grand ou petit, contribue à rendre les soins psychologiques accessibles à ceux qui en ont le plus besoin.", ht:"Chak don, gran oswa piti, kontribye pou rann swen sikolojik aksesib pou moun ki bezwen yo plis.", en:"Every donation, large or small, helps make psychological care accessible to those who need it most.", es:"Cada donación, grande o pequeña, contribuye a hacer la atención psicológica accesible para quienes más la necesitan." },
@@ -347,7 +347,7 @@ const TRANSLATIONS = {
     l_lname:    { fr:"Nom",                ht:"Siyati",             en:"Last name",           es:"Apellido" },
     l_email:    { fr:"Email *",            ht:"Imèl *",             en:"Email *",             es:"Correo *" },
     l_msg:      { fr:"Message de soutien (optionnel)", ht:"Mesaj sipò (opsyonèl)", en:"Support message (optional)", es:"Mensaje de apoyo (opcional)" },
-    p_msg:      { fr:"Partagez pourquoi vous soutenez CAPSY...", ht:"Pataje poukisa w sipòte CAPSY...", en:"Share why you support CAPSY...", es:"Comparta por qué apoya a CAPSY..." },
+    p_msg:      { fr:"Partagez pourquoi vous soutenez CAPSYS...", ht:"Pataje poukisa w sipòte CAPSYS...", en:"Share why you support CAPSYS...", es:"Comparta por qué apoya a CAPSYS..." },
     pay_tag:    { fr:"Méthode de paiement", ht:"Metòd peman",       en:"Payment method",      es:"Método de pago" },
     recurring:  { fr:"Don mensuel récurrent (annulable à tout moment)", ht:"Don mansyèl rekiran (anilèb nenpòt ki lè)", en:"Recurring monthly donation (cancellable at any time)", es:"Donación mensual recurrente (cancelable en cualquier momento)" },
     btn_submit: { fr:"❤ Faire mon don maintenant", ht:"❤ Fè don mwen kounye a", en:"❤ Make my donation now", es:"❤ Hacer mi donación ahora" },
@@ -374,12 +374,12 @@ const TRANSLATIONS = {
 };
 
 // ── LANG ENGINE ──────────────────────────────────────────────────
-const CAPSY_LANG = {
-  current: localStorage.getItem('capsy_lang') || 'fr',
+const CAPSYS_LANG = {
+  current: localStorage.getItem('capsys_lang') || 'fr',
 
   set(lang) {
     this.current = lang;
-    localStorage.setItem('capsy_lang', lang);
+    localStorage.setItem('capsys_lang', lang);
     document.documentElement.setAttribute('lang', lang);
     document.querySelectorAll('.lang-btn').forEach(b => {
       b.classList.toggle('active', b.dataset.lang === lang);
