@@ -12,7 +12,7 @@
 <body data-page="contact">
   <nav class="navbar scrolled" id="navbar">
     <div class="nav-inner">
-      <a href="index.html" class="nav-logo"><span class="logo-mark">C</span><span class="logo-text">CAPSY</span></a>
+      <a href="index.html" class="nav-logo"><span class="logo-mark">C</span><span class="logo-text">CAPSYS</span></a>
       <button class="nav-toggle" id="navToggle"><span></span><span></span><span></span></button>
       <ul class="nav-links" id="navLinks">
         <li><a href="index.html" data-i18n="shared.nav.home"></a></li>
@@ -89,8 +89,8 @@
           <div style="margin-top:24px;padding:24px;border:1px solid var(--border);border-radius:var(--radius-lg)">
             <h5 style="margin-bottom:14px" data-i18n="contact.social_h"></h5>
             <div style="display:flex;gap:16px">
-              <a href="#" style="display:flex;align-items:center;gap:8px;color:var(--teal);font-size:.875rem;font-weight:500"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>CAPSY Haiti</a>
-              <a href="#" style="display:flex;align-items:center;gap:8px;color:var(--teal);font-size:.875rem;font-weight:500"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>@capsyhaiti</a>
+              <a href="#" style="display:flex;align-items:center;gap:8px;color:var(--teal);font-size:.875rem;font-weight:500"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>CAPSYS Haiti</a>
+              <a href="#" style="display:flex;align-items:center;gap:8px;color:var(--teal);font-size:.875rem;font-weight:500"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>@capsyshaiti</a>
             </div>
           </div>
         </div>
@@ -150,7 +150,7 @@
       if (hoursEl) hoursEl.innerHTML = T.hours_p[lang].replace(/\n/g,'<br/>');
     }
     const origApply = CAPSYS_LANG.applyAll.bind(CAPSYS_LANG);
-    CAPSY_LANG.applyAll = function() { origApply(); applyMultiline(); };
+    CAPSYS_LANG.applyAll = function() { origApply(); applyMultiline(); };
   </script>
   <script src="main.js"></script>
   <script>applyMultiline();</script>
