@@ -3,7 +3,7 @@
 document.addEventListener('DOMContentLoaded', () => {
 
   // ── Init language engine ──
-  CAPSY_LANG.init();
+  CAPSYS_LANG.init();
 
   // ── Navbar scroll effect ──
   const navbar = document.getElementById('navbar');
